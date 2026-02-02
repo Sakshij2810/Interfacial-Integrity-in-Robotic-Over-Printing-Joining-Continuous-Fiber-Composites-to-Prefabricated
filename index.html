@@ -978,218 +978,258 @@
           </div>
 
           <!-- Infographic Placeholder 3 -->
-          <div class="laser-microstructure-container">
-            <h4 class="laser-microstructure-title">
-              Laser-Induced Surface Microstructure on PA11
-            </h4>
-            <p class="laser-microstructure-subtitle">
-              Nanosecond pulsed laser treatment creating mechanical interlocking
-              sites
-            </p>
+          <div class="laser-container">
+            <div class="laser-header">
+              <h2 class="laser-title">
+                Laser-Induced Surface Microstructure on PA11
+              </h2>
+              <p class="laser-subtitle">
+                Nanosecond pulsed laser treatment creates periodic groove
+                structures for mechanical interlocking with CFRP matrix
+              </p>
+            </div>
 
-            <div class="microstructure-content">
-              <!-- SEM Micrograph View -->
-              <div class="sem-micrograph">
-                <div class="scan-lines"></div>
-                <div class="noise-overlay"></div>
-
-                <div class="sem-header">
-                  <div class="sem-label">SEM Micrograph View</div>
-                  <div class="sem-info">
-                    <div>MAG: 500x</div>
-                    <div>HV: 15.0 kV</div>
-                  </div>
-                </div>
-
-                <!-- CFRP Infiltration Arrows -->
-                <div class="infiltration-arrows">
-                  <div class="infiltration-arrow">
-                    <span class="arrow-label">CFRP</span>
-                    <span class="arrow-icon">↓</span>
-                  </div>
-                  <div class="infiltration-arrow">
-                    <span class="arrow-label">Matrix</span>
-                    <span class="arrow-icon">↓</span>
-                  </div>
-                  <div class="infiltration-arrow">
-                    <span class="arrow-label">Infiltration</span>
-                    <span class="arrow-icon">↓</span>
-                  </div>
-                  <div class="infiltration-arrow">
-                    <span class="arrow-label">Zone</span>
-                    <span class="arrow-icon">↓</span>
-                  </div>
-                </div>
-
-                <!-- Groove Visualization -->
-                <div class="groove-visualization">
-                  <svg
-                    class="groove-svg"
-                    viewBox="0 0 500 120"
-                    preserveAspectRatio="none"
-                  >
-                    <!-- Groove Pattern -->
-                    <defs>
-                      <linearGradient
-                        id="grooveGrad"
-                        x1="0%"
-                        y1="0%"
-                        x2="0%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          style="stop-color: #5a6b8a; stop-opacity: 1"
-                        />
-                        <stop
-                          offset="100%"
-                          style="stop-color: #3a4766; stop-opacity: 1"
-                        />
-                      </linearGradient>
-                      <linearGradient
-                        id="bottomGrad"
-                        x1="0%"
-                        y1="0%"
-                        x2="0%"
-                        y2="100%"
-                      >
-                        <stop
-                          offset="0%"
-                          style="stop-color: #2d3748; stop-opacity: 1"
-                        />
-                        <stop
-                          offset="100%"
-                          style="stop-color: #1a202c; stop-opacity: 1"
-                        />
-                      </linearGradient>
-                    </defs>
-
-                    <!-- Groove 1 -->
-                    <path
-                      d="M0,20 L0,0 L60,0 L60,20 L50,70 L10,70 Z"
-                      fill="url(#grooveGrad)"
-                      class="groove-wall"
-                    />
-                    <path
-                      d="M10,70 L50,70 L50,75 L10,75 Z"
-                      fill="url(#bottomGrad)"
-                    />
-
-                    <!-- Ridge 1 -->
-                    <path
-                      d="M60,20 L60,0 L120,0 L120,20 Z"
-                      fill="url(#grooveGrad)"
-                      class="groove-wall"
-                    />
-
-                    <!-- Groove 2 -->
-                    <path
-                      d="M120,20 L110,70 L170,70 L160,20 Z"
-                      fill="url(#bottomGrad)"
-                    />
-                    <path
-                      d="M110,70 L170,70 L170,75 L110,75 Z"
-                      fill="#1a1a1a"
-                    />
-
-                    <!-- Ridge 2 -->
-                    <path
-                      d="M160,20 L160,0 L230,0 L230,20 Z"
-                      fill="url(#grooveGrad)"
-                      class="groove-wall"
-                    />
-
-                    <!-- Groove 3 -->
-                    <path
-                      d="M230,20 L220,70 L280,70 L270,20 Z"
-                      fill="url(#bottomGrad)"
-                    />
-                    <path
-                      d="M220,70 L280,70 L280,75 L220,75 Z"
-                      fill="#1a1a1a"
-                    />
-
-                    <!-- Ridge 3 -->
-                    <path
-                      d="M270,20 L270,0 L340,0 L340,20 Z"
-                      fill="url(#grooveGrad)"
-                      class="groove-wall"
-                    />
-
-                    <!-- Groove 4 -->
-                    <path
-                      d="M340,20 L330,70 L390,70 L380,20 Z"
-                      fill="url(#bottomGrad)"
-                    />
-                    <path
-                      d="M330,70 L390,70 L390,75 L330,75 Z"
-                      fill="#1a1a1a"
-                    />
-
-                    <!-- Ridge 4 -->
-                    <path
-                      d="M380,20 L380,0 L450,0 L450,20 Z"
-                      fill="url(#grooveGrad)"
-                      class="groove-wall"
-                    />
-
-                    <!-- Groove 5 -->
-                    <path
-                      d="M450,20 L440,70 L500,70 L500,20 Z"
-                      fill="url(#bottomGrad)"
-                    />
-
-                    <!-- Highlight edges -->
-                    <path
-                      d="M0,0 L60,0 M120,0 L230,0 M270,0 L340,0 M380,0 L450,0"
-                      stroke="rgba(255,255,255,0.2)"
-                      stroke-width="2"
+            <div class="laser-content">
+              <!-- Visualization Panel -->
+              <div class="viz-panel">
+                <div class="viz-header">
+                  <div class="viz-title">
+                    <svg
+                      viewBox="0 0 24 24"
                       fill="none"
-                    />
-
-                    <!-- Depth dimension line -->
-                    <line
-                      x1="480"
-                      y1="5"
-                      x2="480"
-                      y2="70"
-                      stroke="#bf3425"
-                      stroke-width="1.5"
-                      stroke-dasharray="4 2"
-                    />
-                    <polygon points="480,5 476,12 484,12" fill="#bf3425" />
-                    <polygon points="480,70 476,63 484,63" fill="#bf3425" />
-
-                    <!-- Spacing dimension line -->
-                    <line
-                      x1="120"
-                      y1="100"
-                      x2="270"
-                      y2="100"
-                      stroke="#bf3425"
-                      stroke-width="1.5"
-                    />
-                    <polygon points="120,100 127,96 127,104" fill="#bf3425" />
-                    <polygon points="270,100 263,96 263,104" fill="#bf3425" />
-                    <text
-                      x="195"
-                      y="115"
-                      fill="#bf3425"
-                      font-size="11"
-                      font-weight="600"
-                      text-anchor="middle"
-                      font-family="Inter, sans-serif"
+                      stroke="currentColor"
+                      stroke-width="2"
                     >
-                      50-100 μm
-                    </text>
-                  </svg>
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <path d="M11 8v6M8 11h6" />
+                    </svg>
+                    Cross-Section View
+                  </div>
+                  <span class="viz-badge">Magnified</span>
+                </div>
 
-                  <!-- Depth Label -->
-                  <div
-                    class="depth-indicator"
-                    style="position: absolute; right: 10px; top: 20px"
-                  >
-                    <div class="depth-value">10-30 μm</div>
+                <!-- Infiltration Arrows -->
+                <div class="infiltration-arrows">
+                  <div class="infil-arrow">
+                    <span class="infil-label">CFRP</span>
+                    <span class="infil-icon">↓</span>
+                  </div>
+                  <div class="infil-arrow">
+                    <span class="infil-label">Matrix</span>
+                    <span class="infil-icon">↓</span>
+                  </div>
+                  <div class="infil-arrow">
+                    <span class="infil-label">Infiltration</span>
+                    <span class="infil-icon">↓</span>
+                  </div>
+                  <div class="infil-arrow">
+                    <span class="infil-label">Zone</span>
+                    <span class="infil-icon">↓</span>
+                  </div>
+                </div>
+
+                <!-- Cross Section Diagram -->
+                <div class="cross-section">
+                  <div class="groove-svg-container">
+                    <svg class="groove-svg" viewBox="0 0 400 160">
+                      <defs>
+                        <linearGradient
+                          id="infiltrationGradient"
+                          x1="0%"
+                          y1="0%"
+                          x2="0%"
+                          y2="100%"
+                        >
+                          <stop
+                            offset="0%"
+                            style="stop-color: #47577c; stop-opacity: 1"
+                          />
+                          <stop
+                            offset="60%"
+                            style="stop-color: #47577c; stop-opacity: 0.4"
+                          />
+                          <stop
+                            offset="100%"
+                            style="stop-color: #47577c; stop-opacity: 0.1"
+                          />
+                        </linearGradient>
+                      </defs>
+
+                      <!-- CFRP Matrix Layer -->
+                      <rect
+                        x="0"
+                        y="0"
+                        width="400"
+                        height="40"
+                        class="cfrp-layer"
+                        rx="4"
+                      />
+                      <text
+                        x="200"
+                        y="25"
+                        text-anchor="middle"
+                        class="layer-label label-cfrp"
+                      >
+                        CFRP Matrix
+                      </text>
+
+                      <!-- Infiltration zone into grooves -->
+                      <rect
+                        x="0"
+                        y="40"
+                        width="400"
+                        height="25"
+                        class="infiltration-layer"
+                      />
+
+                      <!-- Groove structures -->
+                      <!-- Groove 1 -->
+                      <path
+                        d="M 30 65 L 30 110 L 55 110 L 55 65"
+                        class="groove-wall"
+                      />
+                      <rect
+                        x="30"
+                        y="65"
+                        width="25"
+                        height="35"
+                        fill="url(#infiltrationGradient)"
+                      />
+
+                      <!-- Groove 2 -->
+                      <path
+                        d="M 95 65 L 95 110 L 120 110 L 120 65"
+                        class="groove-wall"
+                      />
+                      <rect
+                        x="95"
+                        y="65"
+                        width="25"
+                        height="35"
+                        fill="url(#infiltrationGradient)"
+                      />
+
+                      <!-- Groove 3 -->
+                      <path
+                        d="M 160 65 L 160 110 L 185 110 L 185 65"
+                        class="groove-wall"
+                      />
+                      <rect
+                        x="160"
+                        y="65"
+                        width="25"
+                        height="35"
+                        fill="url(#infiltrationGradient)"
+                      />
+
+                      <!-- Groove 4 -->
+                      <path
+                        d="M 225 65 L 225 110 L 250 110 L 250 65"
+                        class="groove-wall"
+                      />
+                      <rect
+                        x="225"
+                        y="65"
+                        width="25"
+                        height="35"
+                        fill="url(#infiltrationGradient)"
+                      />
+
+                      <!-- Groove 5 -->
+                      <path
+                        d="M 290 65 L 290 110 L 315 110 L 315 65"
+                        class="groove-wall"
+                      />
+                      <rect
+                        x="290"
+                        y="65"
+                        width="25"
+                        height="35"
+                        fill="url(#infiltrationGradient)"
+                      />
+
+                      <!-- Groove 6 -->
+                      <path
+                        d="M 355 65 L 355 110 L 380 110 L 380 65"
+                        class="groove-wall"
+                      />
+                      <rect
+                        x="355"
+                        y="65"
+                        width="25"
+                        height="35"
+                        fill="url(#infiltrationGradient)"
+                      />
+
+                      <!-- PA11 Liner Base -->
+                      <rect
+                        x="0"
+                        y="110"
+                        width="400"
+                        height="50"
+                        class="liner-layer"
+                        rx="4"
+                      />
+                      <text
+                        x="200"
+                        y="140"
+                        text-anchor="middle"
+                        class="layer-label label-liner"
+                      >
+                        PA11 Liner
+                      </text>
+
+                      <!-- Spacing Dimension -->
+                      <line
+                        x1="95"
+                        y1="145"
+                        x2="160"
+                        y2="145"
+                        class="dim-line"
+                      />
+                      <polygon
+                        points="95,145 100,142 100,148"
+                        class="dim-arrow"
+                      />
+                      <polygon
+                        points="160,145 155,142 155,148"
+                        class="dim-arrow"
+                      />
+                      <text
+                        x="127"
+                        y="158"
+                        text-anchor="middle"
+                        class="dim-text"
+                      >
+                        50-100 μm
+                      </text>
+
+                      <!-- Depth Dimension -->
+                      <line
+                        x1="385"
+                        y1="65"
+                        x2="385"
+                        y2="110"
+                        class="dim-line"
+                      />
+                      <polygon
+                        points="385,65 382,70 388,70"
+                        class="dim-arrow"
+                      />
+                      <polygon
+                        points="385,110 382,105 388,105"
+                        class="dim-arrow"
+                      />
+                      <text
+                        x="395"
+                        y="92"
+                        class="dim-text"
+                        style="font-size: 10px"
+                      >
+                        10-30 μm
+                      </text>
+                    </svg>
                   </div>
                 </div>
 
@@ -1201,116 +1241,130 @@
               </div>
 
               <!-- Parameters Panel -->
-              <div class="parameters-panel">
+              <div class="params-panel">
                 <div class="param-card depth">
-                  <div class="param-icon depth">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M12 3v18M5 12l7 7 7-7" />
-                    </svg>
+                  <div class="param-header">
+                    <div class="param-icon depth">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M12 3v18M5 12l7 7 7-7" />
+                      </svg>
+                    </div>
+                    <div class="param-info">
+                      <div class="param-label">Groove Depth</div>
+                      <div class="param-value">10-30 <span>μm</span></div>
+                    </div>
                   </div>
-                  <div class="param-label">Groove Depth</div>
-                  <div class="param-value">10-30 <span>μm</span></div>
                   <div class="param-desc">
-                    Optimized depth for matrix penetration while maintaining
-                    liner integrity
+                    Optimized depth allows matrix penetration while maintaining
+                    liner structural integrity
                   </div>
                 </div>
 
                 <div class="param-card spacing">
-                  <div class="param-icon spacing">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M21 12H3M8 5l-5 7 5 7M16 5l5 7-5 7" />
-                    </svg>
+                  <div class="param-header">
+                    <div class="param-icon spacing">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M21 12H3M8 5l-5 7 5 7M16 5l5 7-5 7" />
+                      </svg>
+                    </div>
+                    <div class="param-info">
+                      <div class="param-label">Groove Spacing</div>
+                      <div class="param-value">50-100 <span>μm</span></div>
+                    </div>
                   </div>
-                  <div class="param-label">Groove Spacing</div>
-                  <div class="param-value">50-100 <span>μm</span></div>
                   <div class="param-desc">
-                    Periodic pattern for uniform mechanical interlocking
-                    distribution
+                    Periodic pattern ensures uniform distribution of mechanical
+                    interlocking
                   </div>
                 </div>
 
                 <div class="param-card roughness">
-                  <div class="param-icon roughness">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M2 12h4l3-9 4 18 3-9h6" />
-                    </svg>
+                  <div class="param-header">
+                    <div class="param-icon roughness">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M2 12h4l3-9 4 18 3-9h6" />
+                      </svg>
+                    </div>
+                    <div class="param-info">
+                      <div class="param-label">Surface Roughness</div>
+                      <div class="param-value">Ra > 5 <span>μm</span></div>
+                    </div>
                   </div>
-                  <div class="param-label">Surface Roughness</div>
-                  <div class="param-value">Ra > 5 <span>μm</span></div>
                   <div class="param-desc">
-                    Enhanced roughness increases contact area and adhesion
-                    strength
+                    Enhanced roughness increases contact area for improved
+                    adhesion strength
                   </div>
                 </div>
 
-                <div class="process-info">
-                  <div class="process-title">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <circle cx="12" cy="12" r="3" />
-                      <path
-                        d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
-                      />
-                    </svg>
-                    Nanosecond Pulsed Laser
+                <div class="process-card">
+                  <div class="process-header">
+                    <div class="process-icon">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                          d="M12 1v4M12 19v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M1 12h4M19 12h4"
+                        />
+                      </svg>
+                    </div>
+                    <span class="process-title">Nanosecond Pulsed Laser</span>
                   </div>
-                  <div class="process-detail">
+                  <div class="process-desc">
                     Creates controlled microstructures for mechanical
-                    interlocking between PA11 liner and CFRP overwrap
+                    interlocking between PA11 liner and CFRP composite overwrap
+                  </div>
+                  <div class="feature-tags">
+                    <span class="feature-tag">Non-contact</span>
+                    <span class="feature-tag">Precise control</span>
+                    <span class="feature-tag">Scalable</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="microstructure-legend">
+            <!-- Legend -->
+            <div class="legend-section">
               <div class="legend-item">
-                <div class="legend-color pa11"></div>
-                <span>PA11 Liner Surface</span>
+                <div class="legend-color cfrp"></div>
+                <span class="legend-text">CFRP Matrix</span>
               </div>
               <div class="legend-item">
                 <div class="legend-color groove"></div>
-                <span>Laser-Ablated Grooves</span>
+                <span class="legend-text">Laser-Ablated Grooves</span>
               </div>
               <div class="legend-item">
-                <div class="legend-color cfrp"></div>
-                <span>CFRP Matrix Infiltration</span>
+                <div class="legend-color liner"></div>
+                <span class="legend-text">PA11 Liner Substrate</span>
               </div>
             </div>
 
-            <div class="microstructure-source">
+            <p class="source-text">
               Source: Adapted from nanosecond laser treatment studies [11]
               <a
                 href="https://doi.org/10.1016/j.ijhydene.2023.12.304"
                 target="_blank"
                 >DOI: 10.1016/j.ijhydene.2023.12.304</a
               >
-            </div>
+            </p>
           </div>
 
           <h3>2.4 Chemical Primers and Coupling Agents</h3>
