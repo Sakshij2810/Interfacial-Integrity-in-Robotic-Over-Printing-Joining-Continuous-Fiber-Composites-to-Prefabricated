@@ -1,0 +1,3802 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Interfacial Integrity in Robotic Over-Printing | Addcomposites
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Assistant:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Mobile Navigation Toggle Button -->
+    <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="blog-layout">
+      <nav class="blog-sidebar" aria-label="Table of Contents">
+        <h3 class="blog-sidebar-title">Contents</h3>
+        <div class="blog-sidebar-nav">
+          <a href="#introduction" class="blog-sidebar-link active"
+            >Abstract & Introduction</a
+          >
+          <a href="#interface-problem" class="blog-sidebar-link"
+            >The Interface Problem</a
+          >
+          <a href="#surface-activation" class="blog-sidebar-link"
+            >Surface Activation Technologies</a
+          >
+          <a href="#thermal-bonding" class="blog-sidebar-link"
+            >Thermal Bonding Windows</a
+          >
+          <a href="#residual-stress" class="blog-sidebar-link"
+            >Residual Stress & Warpage</a
+          >
+          <a href="#case-studies" class="blog-sidebar-link"
+            >Case Study Analysis</a
+          >
+          <a href="#future-directions" class="blog-sidebar-link"
+            >Future Directions</a
+          >
+          <a href="#conclusions" class="blog-sidebar-link">Conclusions</a>
+          <a href="#references" class="blog-sidebar-link">References</a>
+        </div>
+      </nav>
+
+      <article class="blog-content">
+        <!-- Introduction Section -->
+        <section id="introduction">
+          <h1>
+            Interfacial Integrity in Robotic Over-Printing: Joining Continuous
+            Fiber Composites to Prefabricated Liners
+          </h1>
+
+          <div class="blog-meta">
+            <span class="blog-meta-item">
+              <svg
+                class="blog-meta-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>January 2025</span>
+            </span>
+            <span class="blog-meta-item">
+              <svg
+                class="blog-meta-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>35 min read</span>
+            </span>
+          </div>
+
+          <p class="subtitle">
+            A Technical Review of Hybrid Manufacturing Challenges at the
+            Composite-Liner Interface
+          </p>
+
+          <img
+            src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092b3b951606a04bdb3a1_1.png"
+            alt="Robotic over-printing of continuous fiber composites onto polymer liner"
+            class="full-width-image"
+          />
+
+          <div class="intro-card">
+            <h2>Abstract</h2>
+            <p class="drop-cap">
+              The transition from conventional autoclave-cured composite
+              manufacturing to robotic over-printing of continuous fiber
+              thermoplastics onto prefabricated polymer liners represents a
+              paradigm shift in pressure vessel and structural reinforcement
+              production. This review examines the critical technical challenges
+              inherent in "hybrid manufacturing"—specifically, the deposition of
+              hot composite tape (temperatures exceeding 300°C for engineering
+              thermoplastics) onto cold, pre-made liners such as those found in
+              Type IV/V composite overwrapped pressure vessels (COPVs) and
+              automotive structural reinforcements.
+            </p>
+
+            <p>
+              The analysis focuses strictly on the interface: adhesion
+              mechanisms governing bond formation, surface preparation
+              technologies ranging from plasma treatment to laser ablation, and
+              thermal management strategies to prevent liner collapse or
+              burn-through. Quantitative data on lap shear strength improvements
+              (up to 8.35× enhancement with optimized laser treatment),
+              coefficient of thermal expansion (CTE) mismatches (carbon fiber at
+              -1.5 to +1.5 ppm/°C versus HDPE at 100-200 ppm/°C), and hydrogen
+              permeability rates are synthesized to provide engineers with
+              actionable design guidelines for robust interfacial bonding.
+            </p>
+          </div>
+        </section>
+
+        <!-- The Interface Problem Section -->
+        <section id="interface-problem">
+          <h2>
+            1. The Interface Problem: Thermal Incompatibility at the Bonding
+            Frontier
+          </h2>
+
+          <h3>1.1 Fundamental Challenge</h3>
+          <p>
+            The deposition of molten continuous fiber thermoplastic tape onto a
+            cold polymer substrate creates a thermal shock scenario that
+            fundamentally challenges interfacial integrity. In thermoplastic
+            tape winding (TTW) and automated fiber placement (AFP), the incoming
+            prepreg tape must reach temperatures sufficient for matrix flow and
+            molecular interdiffusion—typically 280-400°C for engineering
+            thermoplastics like PEEK, PEKK, or carbon fiber-reinforced
+            polyamide. Meanwhile, the prefabricated liner, whether high-density
+            polyethylene (HDPE) or polyamide (PA6/PA11), maintains ambient or
+            moderately elevated temperatures.
+          </p>
+
+          <p>
+            This temperature differential creates several competing failure
+            mechanisms:
+          </p>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <span class="feature-icon">🔗</span>
+              <div>
+                <strong>Insufficient Bonding:</strong> If the liner surface
+                temperature remains too low, molecular interdiffusion across the
+                interface cannot occur, resulting in weak adhesive bonds
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">⚠️</span>
+              <div>
+                <strong>Liner Collapse:</strong> Excessive heat transfer into
+                thin-walled liners (typically 2-6 mm for Type IV vessels) causes
+                localized softening beyond the material's load-bearing capacity
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🔥</span>
+              <div>
+                <strong>Burn-Through:</strong> Concentrated thermal input can
+                degrade or melt through the liner entirely
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">📏</span>
+              <div>
+                <strong>Residual Stress Accumulation:</strong> Rapid cooling of
+                the deposited tape while constrained by the cool substrate locks
+                in thermal stresses that promote delamination
+              </div>
+            </div>
+          </div>
+
+          <!-- Figure 1 -->
+          <div class="split-layout">
+            <div class="split-image">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092b4d20f37123cedbe5c_2.png"
+                alt="Thermal gradient at the nip point during over-printing"
+              />
+            </div>
+            <div class="split-content">
+              <h4>Thermal Gradient at the Nip Point During Over-Printing</h4>
+              <p>
+                Cross-sectional view showing temperature distribution during
+                thermoplastic tape deposition onto a polymer liner. Illustrates
+                the steep thermal gradient from molten tape (~350°C) through the
+                interface to the cool liner substrate (~25-80°C), with heat flux
+                vectors and consolidation roller position.
+              </p>
+            </div>
+          </div>
+
+          <!-- Infographic Placeholder 1 -->
+          <div class="compaction-roller-container">
+            <h4 class="compaction-roller-title">
+              Thermoplastic Tape Winding Process
+            </h4>
+            <p class="compaction-roller-subtitle">
+              Temperature distribution through the compaction zone
+            </p>
+
+            <div class="compaction-roller-diagram" id="compactionDiagram">
+              <!-- Compaction Roller Assembly -->
+              <div class="roller-label">Compaction Roller</div>
+              <div class="roller-assembly" data-zone="roller">
+                <div class="roller-shafts">
+                  <div class="roller-shaft"></div>
+                  <div class="roller-shaft"></div>
+                  <div class="roller-shaft"></div>
+                  <div class="roller-shaft"></div>
+                  <div class="roller-shaft"></div>
+                </div>
+                <div class="roller-body"></div>
+              </div>
+
+              <!-- Pressure Arrows -->
+              <div class="pressure-arrows">
+                <div class="pressure-arrow"></div>
+                <div class="pressure-arrow"></div>
+                <div class="pressure-arrow"></div>
+              </div>
+
+              <!-- Incoming Tape (SVG) -->
+              <svg
+                class="incoming-tape"
+                width="180"
+                height="50"
+                data-zone="tape"
+              >
+                <defs>
+                  <linearGradient
+                    id="tapeGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: #ff6b5b; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: #bf3425; stop-opacity: 1"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  class="tape-line"
+                  d="M 0 25 Q 80 25 160 40"
+                  stroke="url(#tapeGradient)"
+                  stroke-width="10"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <text
+                  x="0"
+                  y="12"
+                  fill="#bf3425"
+                  font-size="11"
+                  font-weight="600"
+                >
+                  Incoming Tape
+                </text>
+                <text x="0" y="48" fill="#bf3425" font-size="10">(molten)</text>
+              </svg>
+
+              <!-- Heat radiation lines -->
+              <div class="heat-lines">
+                <div class="heat-line"></div>
+                <div class="heat-line"></div>
+                <div class="heat-line"></div>
+              </div>
+
+              <!-- Nip Point Zone -->
+              <div class="temp-zone nip-point-zone" data-zone="nip">
+                <span class="zone-label-left">Nip Point</span>
+                <div class="zone-bar"></div>
+                <span class="zone-label">
+                  <span class="temp-badge">~350°C</span>
+                </span>
+              </div>
+
+              <!-- Flow Indicator -->
+              <div class="flow-indicator flow-1">▼</div>
+
+              <!-- Interface Zone -->
+              <div class="temp-zone interface-zone" data-zone="interface">
+                <span class="zone-label-left">Interface</span>
+                <div class="zone-bar"></div>
+                <span class="zone-label">
+                  <span class="temp-badge">180-250°C</span>
+                </span>
+              </div>
+
+              <!-- Flow Indicator -->
+              <div class="flow-indicator flow-2">▼</div>
+
+              <!-- Liner Surface Zone -->
+              <div class="temp-zone liner-surface-zone" data-zone="surface">
+                <span class="zone-label-left">Liner Surface</span>
+                <div class="zone-bar"></div>
+                <span class="zone-label" style="color: #64748b">
+                  Consolidated
+                </span>
+              </div>
+
+              <!-- Liner Bulk Zone -->
+              <div class="temp-zone liner-bulk-zone" data-zone="bulk">
+                <span class="zone-label-left">Liner Bulk</span>
+                <div class="zone-bar"></div>
+                <span class="zone-label">
+                  <span class="temp-badge" style="background: #9d9d9c"
+                    >25-80°C</span
+                  >
+                </span>
+              </div>
+
+              <!-- Flow Indicator -->
+              <div class="flow-indicator flow-3">▼</div>
+
+              <!-- Mandrel/Support -->
+              <div class="temp-zone mandrel-zone" data-zone="mandrel">
+                <span class="zone-label-left">Mandrel/Support</span>
+                <div class="zone-bar"></div>
+                <span
+                  class="zone-label"
+                  style="color: #47577c; font-weight: 600"
+                >
+                  Structural Base
+                </span>
+              </div>
+
+              <!-- Temperature Gradient Sidebar -->
+              <div class="temp-gradient">
+                <span class="temp-gradient-label high">350°C</span>
+                <span class="temp-gradient-label mid">~150°C</span>
+                <span class="temp-gradient-label low">25°C</span>
+              </div>
+
+              <!-- Tooltip -->
+              <div class="process-tooltip" id="processTooltip">
+                <div class="tooltip-title"></div>
+                <div class="tooltip-temp"></div>
+                <div class="tooltip-desc"></div>
+              </div>
+            </div>
+
+            <div class="compaction-legend">
+              <div class="legend-item">
+                <div class="legend-color hot"></div>
+                <span>Molten Zone (>300°C)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color warm"></div>
+                <span>Bonding Zone (180-250°C)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color cool"></div>
+                <span>Cooling Zone (25-80°C)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color cold"></div>
+                <span>Support Structure</span>
+              </div>
+            </div>
+
+            <div class="compaction-source">
+              Source: Adapted from thermoplastic tape winding process models [1,
+              2]
+              <a href="https://doi.org/10.3390/polym13121951" target="_blank"
+                >DOI: 10.3390/polym13121951</a
+              >
+            </div>
+          </div>
+
+          <h3>1.2 The Bonding Mechanism: Intimate Contact and Autohesion</h3>
+          <p>
+            Successful fusion bonding between the incoming tape and substrate
+            requires satisfaction of two sequential conditions:
+          </p>
+
+          <div class="specs-list">
+            <div class="spec-item">
+              <span class="spec-label">Intimate Contact</span>
+              <span class="spec-value"
+                >Surfaces must be brought into molecular-scale proximity.
+                Requires 0.1-1.0 MPa pressure and temperature for viscous
+                flow.</span
+              >
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Autohesion (Polymer Healing)</span>
+              <span class="spec-value"
+                >Polymer chain interdiffusion across interface creates
+                entanglements providing mechanical strength.</span
+              >
+            </div>
+          </div>
+
+          <p>
+            The degree of healing D<sub>h</sub> follows: D<sub>h</sub> =
+            (t/t<sub>w</sub>)<sup>1/4</sup>, where t is contact time and t<sub
+              >w</sub
+            >
+            is the reptation time (temperature-dependent).
+          </p>
+
+          <p>
+            For dissimilar materials (e.g., CF/PEEK tape onto PA6 liner), true
+            autohesion is impossible; bonding instead relies on mechanical
+            interlocking, van der Waals interactions, and potential chemical
+            bonding at functionalized surfaces.
+          </p>
+
+          <h3>1.3 Failure Statistics in COPV Applications</h3>
+          <p>
+            The criticality of the liner-composite interface is underscored by
+            failure statistics from composite overwrapped pressure vessel
+            applications:
+          </p>
+          <ul>
+            <li>
+              Liner failure is the second leading cause of COPV failure after
+              composite damage
+            </li>
+            <li>
+              Interface debonding contributes to liner collapse during rapid
+              depressurization cycles
+            </li>
+            <li>
+              The 2016 SpaceX Falcon 9 pad explosion was attributed to failure
+              of a COPV, where frozen solid oxygen accumulated between the
+              aluminum liner and composite overwrap, demonstrating the
+              catastrophic consequences of interface defects
+            </li>
+          </ul>
+        </section>
+
+        <!-- Surface Activation Technologies Section -->
+        <section id="surface-activation">
+          <h2>2. Surface Activation Technologies</h2>
+
+          <p>
+            The inherently low surface energy of polyolefins (HDPE: 28-30 mN/m)
+            and the semi-crystalline nature of engineering polymers create
+            barriers to adhesive bonding. Surface activation technologies aim to
+            increase surface energy, introduce polar functional groups, and
+            create mechanical interlocking features.
+          </p>
+
+          <h3>2.1 Atmospheric Plasma Treatment</h3>
+          <p>
+            Plasma treatment represents the most widely adopted surface
+            activation technology for thermoplastic liner materials, offering
+            non-contact processing and integration into continuous manufacturing
+            lines.
+          </p>
+
+          <h4>Mechanism:</h4>
+          <ul>
+            <li>
+              Interaction of plasma species (charged particles, molecular
+              radicals, excited species) with the polymer surface
+            </li>
+            <li>
+              Introduction of oxygen-containing functional groups (C-O, C=O,
+              O-C=O, O-H)
+            </li>
+            <li>
+              Surface oxidation increases surface energy from ~28 mN/m to >50
+              mN/m
+            </li>
+          </ul>
+
+          <h4>Quantitative Results:</h4>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>Contact Angle Reduction</th>
+                  <th>Surface Energy Increase</th>
+                  <th>Shear Strength Gain</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HDPE</td>
+                  <td>47.3° decrease</td>
+                  <td>28 → >50 mN/m</td>
+                  <td>2-3×</td>
+                </tr>
+                <tr>
+                  <td>PA12</td>
+                  <td>42.6° decrease</td>
+                  <td>—</td>
+                  <td>2-4×</td>
+                </tr>
+                <tr>
+                  <td>PA6</td>
+                  <td>50.1° decrease</td>
+                  <td>—</td>
+                  <td>Up to 4×</td>
+                </tr>
+                <tr>
+                  <td>PP</td>
+                  <td>Similar to HDPE</td>
+                  <td>28 → 105+ dynes/cm</td>
+                  <td>2×</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="highlight-box">
+            <h4>Critical Limitation—Aging Effect:</h4>
+            <p>
+              The plasma treatment effect is not permanent. Contact angle
+              measurements show pronounced relaxation (aging) after treatment,
+              with surface energy declining significantly within hours to days
+              as polymer chains reorganize and polar groups become buried. This
+              necessitates immediate bonding after plasma treatment or use of
+              protective primers.
+            </p>
+          </div>
+
+          <!-- Infographic Placeholder 2 -->
+          <div class="plasma-treatment-container">
+            <h4 class="plasma-treatment-title">
+              Plasma Surface Treatment Mechanism
+            </h4>
+            <p class="plasma-treatment-subtitle">
+              Surface activation for improved adhesion bonding
+            </p>
+
+            <div class="plasma-stages">
+              <!-- Stage A: Untreated -->
+              <div class="plasma-stage untreated">
+                <div class="stage-label">(a)</div>
+                <div class="stage-title">Untreated Surface</div>
+
+                <div class="molecular-viz">
+                  <div class="carbon-chain">
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-properties">
+                  <div class="property-item">
+                    <span class="property-label">Surface Energy:</span>
+                    <span class="property-value low">Low</span>
+                  </div>
+                  <div class="property-item">
+                    <span class="property-label">Contact Angle θ:</span>
+                    <span class="property-value low">~95°</span>
+                  </div>
+                </div>
+
+                <div class="contact-angle-viz">
+                  <div class="droplet">
+                    <div class="droplet-untreated"></div>
+                    <div class="surface-line"></div>
+                  </div>
+                </div>
+
+                <div class="stage-tooltip">
+                  <div class="tooltip-text">
+                    Non-polar hydrocarbon surface with low wettability. Poor
+                    adhesion characteristics due to weak intermolecular forces.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arrow 1 -->
+              <div class="plasma-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+
+              <!-- Stage B: Plasma Treatment -->
+              <div class="plasma-stage treatment">
+                <div class="stage-label">(b)</div>
+                <div class="stage-title">Plasma Treatment</div>
+
+                <div class="molecular-viz">
+                  <div class="plasma-glow"></div>
+
+                  <div class="plasma-species">
+                    <div class="plasma-particle">
+                      <span class="particle-symbol">O₂⁺</span>
+                      <span class="particle-arrow">↓</span>
+                    </div>
+                    <div class="plasma-particle">
+                      <span class="particle-symbol">OH·</span>
+                      <span class="particle-arrow">↓</span>
+                    </div>
+                    <div class="plasma-particle">
+                      <span class="particle-symbol">O·</span>
+                      <span class="particle-arrow">↓</span>
+                    </div>
+                    <div class="plasma-particle">
+                      <span class="particle-symbol">e⁻</span>
+                      <span class="particle-arrow">↓</span>
+                    </div>
+                  </div>
+
+                  <div class="spark"></div>
+                  <div class="spark"></div>
+                  <div class="spark"></div>
+                  <div class="spark"></div>
+                  <div class="spark"></div>
+
+                  <div class="carbon-chain">
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="hydrogen-atom">H</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-properties">
+                  <div class="property-item">
+                    <span class="property-label">Process:</span>
+                    <span class="property-value process">Radical Attack</span>
+                  </div>
+                  <div class="property-item">
+                    <span class="property-label">Active Species:</span>
+                    <span class="property-value process">O₂⁺, OH·, O·, e⁻</span>
+                  </div>
+                </div>
+
+                <div class="stage-tooltip">
+                  <div class="tooltip-text">
+                    High-energy plasma species bombard the surface, breaking C-H
+                    bonds and creating reactive radical sites for
+                    functionalization.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arrow 2 -->
+              <div class="plasma-arrow">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
+
+              <!-- Stage C: Activated Surface -->
+              <div class="plasma-stage activated">
+                <div class="stage-label">(c)</div>
+                <div class="stage-title">Activated Surface</div>
+
+                <div class="molecular-viz">
+                  <div class="carbon-chain">
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="functional-group">
+                        <div class="oh-group">
+                          <div class="oxygen-atom small">O</div>
+                          <div
+                            class="hydrogen-atom"
+                            style="width: 14px; height: 14px; font-size: 8px"
+                          >
+                            H
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="functional-group">
+                        <div class="double-bond">
+                          <div class="double-bond-line"></div>
+                          <div class="double-bond-line"></div>
+                        </div>
+                        <div class="oxygen-atom">O</div>
+                      </div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="functional-group">
+                        <div class="oxygen-atom small">O</div>
+                      </div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="hydrogen-bond"></div>
+                      <div class="functional-group">
+                        <div class="oh-group">
+                          <div class="oxygen-atom small">O</div>
+                          <div
+                            class="hydrogen-atom"
+                            style="width: 14px; height: 14px; font-size: 8px"
+                          >
+                            H
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carbon-bond"></div>
+                    <div class="carbon-unit">
+                      <div class="carbon-atom">C</div>
+                      <div class="functional-group">
+                        <div class="double-bond">
+                          <div class="double-bond-line"></div>
+                          <div class="double-bond-line"></div>
+                        </div>
+                        <div class="oxygen-atom">O</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="stage-properties">
+                  <div class="property-item">
+                    <span class="property-label">Surface Energy:</span>
+                    <span class="property-value high">High</span>
+                  </div>
+                  <div class="property-item">
+                    <span class="property-label">Contact Angle θ:</span>
+                    <span class="property-value high">~45-55°</span>
+                  </div>
+                </div>
+
+                <div class="contact-angle-viz">
+                  <div class="droplet">
+                    <div class="droplet-activated"></div>
+                    <div class="surface-line"></div>
+                  </div>
+                </div>
+
+                <div class="stage-tooltip">
+                  <div class="tooltip-text">
+                    Polar functional groups (-OH, C=O) increase surface energy,
+                    improving wettability and enabling strong adhesive bonding.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="plasma-legend">
+              <div class="legend-item">
+                <div class="legend-atom carbon">C</div>
+                <span>Carbon</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-atom hydrogen">H</div>
+                <span>Hydrogen</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-atom oxygen">O</div>
+                <span>Oxygen</span>
+              </div>
+              <div class="legend-item">
+                <span style="color: #bf3425; font-weight: 600">-OH</span>
+                <span>Hydroxyl Group</span>
+              </div>
+              <div class="legend-item">
+                <span style="color: #bf3425; font-weight: 600">C=O</span>
+                <span>Carbonyl Group</span>
+              </div>
+            </div>
+
+            <div class="plasma-source">
+              Source: Based on plasma treatment studies [5, 6]
+              <a
+                href="https://doi.org/10.1007/s10443-020-09854-y"
+                target="_blank"
+                >DOI: 10.1007/s10443-020-09854-y</a
+              >
+            </div>
+          </div>
+
+          <h3>2.2 Mechanical Abrasion: Grit Blasting and Sanding</h3>
+          <p>
+            Mechanical surface preparation creates topographical features for
+            mechanical interlocking and removes surface contaminants.
+          </p>
+
+          <h4>Grit Blasting Results (CFRP Adherends):</h4>
+          <ul>
+            <li>
+              Peel-ply + grit blasting: Highest average roughness (7.35 μm),
+              highest surface energy (49.1 mJ/m²)
+            </li>
+            <li>Manual sanding: Effective but operator-dependent</li>
+            <li>Random sanding direction: Highest shear strength reported</li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>Critical Consideration for Thermoplastics:</h4>
+            <p>
+              Unlike thermosets, where abrasion breaks and opens cross-linked
+              polymer chains to increase reactivity, thermoplastic polymers are
+              not locked into rigid networks. Abrasion alone may not provide
+              lasting surface activation—energetic treatments (plasma, laser)
+              are often required in combination.
+            </p>
+          </div>
+
+          <h3>2.3 Laser Surface Treatment</h3>
+          <p>
+            Laser ablation offers precise, non-contact surface modification with
+            the ability to create controlled micro-scale features.
+          </p>
+
+          <h4>Nanosecond Pulsed Laser Treatment for PA11-CFRP Interfaces:</h4>
+          <p>
+            A breakthrough study demonstrated the effectiveness of nanosecond
+            pulsed laser treatment for enhancing bonding between PA11 liners and
+            CFRP in Type IV hydrogen storage vessels:
+          </p>
+
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Untreated</th>
+                  <th>Laser-Treated</th>
+                  <th>Improvement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CDP Strength (N·mm/mm)</td>
+                  <td>~5.1</td>
+                  <td>24.1</td>
+                  <td>4.74×</td>
+                </tr>
+                <tr>
+                  <td>FWT Strength (MPa)</td>
+                  <td>~0.29</td>
+                  <td>2.43</td>
+                  <td>8.35×</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-number">400</span>
+              <span class="stat-label">mm/s Scan Speed</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">20</span>
+              <span class="stat-label">kHz Frequency</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">12.7</span>
+              <span class="stat-label">W Power</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">8.35×</span>
+              <span class="stat-label">FWT Improvement</span>
+            </div>
+          </div>
+
+          <p>
+            <strong>Mechanism:</strong> Formation of periodic grooves on the
+            PA11 surface increases roughness and mechanical interlocking area.
+            UV wavelengths (355 nm) additionally introduce polar functional
+            groups (O-C=O, O-O) through photo-chemical bond breaking rather than
+            purely thermal ablation.
+          </p>
+
+          <div class="key-question">
+            <p>
+              Combined Laser-Plasma Treatment (2025 Results): Synergistic
+              treatment achieved fatigue cycle improvements of 11.8× at 45%
+              stress level and 20.4× at 90% stress level
+            </p>
+          </div>
+
+          <!-- Infographic Placeholder 3 -->
+          <div class="laser-microstructure-container">
+            <h4 class="laser-microstructure-title">
+              Laser-Induced Surface Microstructure on PA11
+            </h4>
+            <p class="laser-microstructure-subtitle">
+              Nanosecond pulsed laser treatment creating mechanical interlocking
+              sites
+            </p>
+
+            <div class="microstructure-content">
+              <!-- SEM Micrograph View -->
+              <div class="sem-micrograph">
+                <div class="scan-lines"></div>
+                <div class="noise-overlay"></div>
+
+                <div class="sem-header">
+                  <div class="sem-label">SEM Micrograph View</div>
+                  <div class="sem-info">
+                    <div>MAG: 500x</div>
+                    <div>HV: 15.0 kV</div>
+                  </div>
+                </div>
+
+                <!-- CFRP Infiltration Arrows -->
+                <div class="infiltration-arrows">
+                  <div class="infiltration-arrow">
+                    <span class="arrow-label">CFRP</span>
+                    <span class="arrow-icon">↓</span>
+                  </div>
+                  <div class="infiltration-arrow">
+                    <span class="arrow-label">Matrix</span>
+                    <span class="arrow-icon">↓</span>
+                  </div>
+                  <div class="infiltration-arrow">
+                    <span class="arrow-label">Infiltration</span>
+                    <span class="arrow-icon">↓</span>
+                  </div>
+                  <div class="infiltration-arrow">
+                    <span class="arrow-label">Zone</span>
+                    <span class="arrow-icon">↓</span>
+                  </div>
+                </div>
+
+                <!-- Groove Visualization -->
+                <div class="groove-visualization">
+                  <svg
+                    class="groove-svg"
+                    viewBox="0 0 500 120"
+                    preserveAspectRatio="none"
+                  >
+                    <!-- Groove Pattern -->
+                    <defs>
+                      <linearGradient
+                        id="grooveGrad"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          style="stop-color: #5a6b8a; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="100%"
+                          style="stop-color: #3a4766; stop-opacity: 1"
+                        />
+                      </linearGradient>
+                      <linearGradient
+                        id="bottomGrad"
+                        x1="0%"
+                        y1="0%"
+                        x2="0%"
+                        y2="100%"
+                      >
+                        <stop
+                          offset="0%"
+                          style="stop-color: #2d3748; stop-opacity: 1"
+                        />
+                        <stop
+                          offset="100%"
+                          style="stop-color: #1a202c; stop-opacity: 1"
+                        />
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Groove 1 -->
+                    <path
+                      d="M0,20 L0,0 L60,0 L60,20 L50,70 L10,70 Z"
+                      fill="url(#grooveGrad)"
+                      class="groove-wall"
+                    />
+                    <path
+                      d="M10,70 L50,70 L50,75 L10,75 Z"
+                      fill="url(#bottomGrad)"
+                    />
+
+                    <!-- Ridge 1 -->
+                    <path
+                      d="M60,20 L60,0 L120,0 L120,20 Z"
+                      fill="url(#grooveGrad)"
+                      class="groove-wall"
+                    />
+
+                    <!-- Groove 2 -->
+                    <path
+                      d="M120,20 L110,70 L170,70 L160,20 Z"
+                      fill="url(#bottomGrad)"
+                    />
+                    <path
+                      d="M110,70 L170,70 L170,75 L110,75 Z"
+                      fill="#1a1a1a"
+                    />
+
+                    <!-- Ridge 2 -->
+                    <path
+                      d="M160,20 L160,0 L230,0 L230,20 Z"
+                      fill="url(#grooveGrad)"
+                      class="groove-wall"
+                    />
+
+                    <!-- Groove 3 -->
+                    <path
+                      d="M230,20 L220,70 L280,70 L270,20 Z"
+                      fill="url(#bottomGrad)"
+                    />
+                    <path
+                      d="M220,70 L280,70 L280,75 L220,75 Z"
+                      fill="#1a1a1a"
+                    />
+
+                    <!-- Ridge 3 -->
+                    <path
+                      d="M270,20 L270,0 L340,0 L340,20 Z"
+                      fill="url(#grooveGrad)"
+                      class="groove-wall"
+                    />
+
+                    <!-- Groove 4 -->
+                    <path
+                      d="M340,20 L330,70 L390,70 L380,20 Z"
+                      fill="url(#bottomGrad)"
+                    />
+                    <path
+                      d="M330,70 L390,70 L390,75 L330,75 Z"
+                      fill="#1a1a1a"
+                    />
+
+                    <!-- Ridge 4 -->
+                    <path
+                      d="M380,20 L380,0 L450,0 L450,20 Z"
+                      fill="url(#grooveGrad)"
+                      class="groove-wall"
+                    />
+
+                    <!-- Groove 5 -->
+                    <path
+                      d="M450,20 L440,70 L500,70 L500,20 Z"
+                      fill="url(#bottomGrad)"
+                    />
+
+                    <!-- Highlight edges -->
+                    <path
+                      d="M0,0 L60,0 M120,0 L230,0 M270,0 L340,0 M380,0 L450,0"
+                      stroke="rgba(255,255,255,0.2)"
+                      stroke-width="2"
+                      fill="none"
+                    />
+
+                    <!-- Depth dimension line -->
+                    <line
+                      x1="480"
+                      y1="5"
+                      x2="480"
+                      y2="70"
+                      stroke="#bf3425"
+                      stroke-width="1.5"
+                      stroke-dasharray="4 2"
+                    />
+                    <polygon points="480,5 476,12 484,12" fill="#bf3425" />
+                    <polygon points="480,70 476,63 484,63" fill="#bf3425" />
+
+                    <!-- Spacing dimension line -->
+                    <line
+                      x1="120"
+                      y1="100"
+                      x2="270"
+                      y2="100"
+                      stroke="#bf3425"
+                      stroke-width="1.5"
+                    />
+                    <polygon points="120,100 127,96 127,104" fill="#bf3425" />
+                    <polygon points="270,100 263,96 263,104" fill="#bf3425" />
+                    <text
+                      x="195"
+                      y="115"
+                      fill="#bf3425"
+                      font-size="11"
+                      font-weight="600"
+                      text-anchor="middle"
+                      font-family="Inter, sans-serif"
+                    >
+                      50-100 μm
+                    </text>
+                  </svg>
+
+                  <!-- Depth Label -->
+                  <div
+                    class="depth-indicator"
+                    style="position: absolute; right: 10px; top: 20px"
+                  >
+                    <div class="depth-value">10-30 μm</div>
+                  </div>
+                </div>
+
+                <!-- Scale Bar -->
+                <div class="scale-bar">
+                  <div class="scale-line"></div>
+                  <span class="scale-text">100 μm</span>
+                </div>
+              </div>
+
+              <!-- Parameters Panel -->
+              <div class="parameters-panel">
+                <div class="param-card depth">
+                  <div class="param-icon depth">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M12 3v18M5 12l7 7 7-7" />
+                    </svg>
+                  </div>
+                  <div class="param-label">Groove Depth</div>
+                  <div class="param-value">10-30 <span>μm</span></div>
+                  <div class="param-desc">
+                    Optimized depth for matrix penetration while maintaining
+                    liner integrity
+                  </div>
+                </div>
+
+                <div class="param-card spacing">
+                  <div class="param-icon spacing">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M21 12H3M8 5l-5 7 5 7M16 5l5 7-5 7" />
+                    </svg>
+                  </div>
+                  <div class="param-label">Groove Spacing</div>
+                  <div class="param-value">50-100 <span>μm</span></div>
+                  <div class="param-desc">
+                    Periodic pattern for uniform mechanical interlocking
+                    distribution
+                  </div>
+                </div>
+
+                <div class="param-card roughness">
+                  <div class="param-icon roughness">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M2 12h4l3-9 4 18 3-9h6" />
+                    </svg>
+                  </div>
+                  <div class="param-label">Surface Roughness</div>
+                  <div class="param-value">Ra > 5 <span>μm</span></div>
+                  <div class="param-desc">
+                    Enhanced roughness increases contact area and adhesion
+                    strength
+                  </div>
+                </div>
+
+                <div class="process-info">
+                  <div class="process-title">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="3" />
+                      <path
+                        d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+                      />
+                    </svg>
+                    Nanosecond Pulsed Laser
+                  </div>
+                  <div class="process-detail">
+                    Creates controlled microstructures for mechanical
+                    interlocking between PA11 liner and CFRP overwrap
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="microstructure-legend">
+              <div class="legend-item">
+                <div class="legend-color pa11"></div>
+                <span>PA11 Liner Surface</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color groove"></div>
+                <span>Laser-Ablated Grooves</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color cfrp"></div>
+                <span>CFRP Matrix Infiltration</span>
+              </div>
+            </div>
+
+            <div class="microstructure-source">
+              Source: Adapted from nanosecond laser treatment studies [11]
+              <a
+                href="https://doi.org/10.1016/j.ijhydene.2023.12.304"
+                target="_blank"
+                >DOI: 10.1016/j.ijhydene.2023.12.304</a
+              >
+            </div>
+          </div>
+
+          <h3>2.4 Chemical Primers and Coupling Agents</h3>
+          <p>
+            Silane coupling agents provide chemical bridging between dissimilar
+            materials:
+          </p>
+
+          <h4>Mechanism:</h4>
+          <ul>
+            <li>
+              Hydrolyzable groups (typically alkoxy: -OCH₃, -OC₂H₅) react with
+              hydroxyl groups on substrates
+            </li>
+            <li>
+              Organic functional groups (amino, mercapto, epoxy) react with
+              polymer matrices
+            </li>
+            <li>Creates covalent "adhesive bridge" at the interface</li>
+          </ul>
+
+          <h4>Performance Data:</h4>
+          <ul>
+            <li>
+              Plasma-treated CF thermoplastic + mercapto silane monolayer: 27
+              MPa shear stress (versus 10 MPa untreated, 22 MPa plasma-only)
+            </li>
+            <li>
+              Dipodal silanes: Up to 10⁵× greater hydrolysis resistance for
+              primer applications
+            </li>
+            <li>
+              Aminosilane coupling agents: Achieved 1.53 MPa adhesive strength
+              in thermal protection coatings at 13 wt% loading
+            </li>
+          </ul>
+
+          <h3>2.5 Comparative Surface Treatment Performance</h3>
+
+          <h4>Lap Shear Strength by Surface Treatment Method</h4>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Treatment</th>
+                  <th>Substrate</th>
+                  <th>Adhesive/Bond Type</th>
+                  <th>Lap Shear (MPa)</th>
+                  <th>Failure Mode</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Untreated</td>
+                  <td>HDPE</td>
+                  <td>Structural adhesive</td>
+                  <td>~3-5</td>
+                  <td>Adhesive (interface)</td>
+                </tr>
+                <tr>
+                  <td>Plasma (air)</td>
+                  <td>HDPE</td>
+                  <td>Structural adhesive</td>
+                  <td>10-15</td>
+                  <td>Mixed</td>
+                </tr>
+                <tr>
+                  <td>Plasma (air)</td>
+                  <td>PA6</td>
+                  <td>Structural adhesive</td>
+                  <td>20-22</td>
+                  <td>Cohesive (adhesive)</td>
+                </tr>
+                <tr>
+                  <td>Plasma + Silane</td>
+                  <td>CF/thermoplastic</td>
+                  <td>Direct fusion</td>
+                  <td>27</td>
+                  <td>Cohesive (substrate)</td>
+                </tr>
+                <tr>
+                  <td>Grit blast</td>
+                  <td>CFRP</td>
+                  <td>Epoxy adhesive</td>
+                  <td>15-20</td>
+                  <td>Mixed</td>
+                </tr>
+                <tr>
+                  <td>Peel-ply + grit</td>
+                  <td>CFRP</td>
+                  <td>Epoxy adhesive</td>
+                  <td>20-25</td>
+                  <td>Cohesive</td>
+                </tr>
+                <tr>
+                  <td>Laser (CO₂)</td>
+                  <td>CFRP</td>
+                  <td>Adhesive</td>
+                  <td>14.3</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Laser (ns pulsed)</td>
+                  <td>PA11</td>
+                  <td>CFRP direct</td>
+                  <td>2.43 (FWT)</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="image-caption">
+            <em
+              >Note: Cohesive failure in the substrate or adhesive indicates the
+              interface is no longer the weakest link—the desired outcome.</em
+            >
+          </p>
+        </section>
+
+        <!-- Thermal Bonding Windows Section -->
+        <section id="thermal-bonding">
+          <h2>3. Thermal Bonding Windows</h2>
+
+          <h3>3.1 Critical Temperature Thresholds</h3>
+          <p>
+            Successful fusion bonding requires maintaining the interface within
+            a narrow "bonding window" defined by the thermal properties of both
+            materials:
+          </p>
+
+          <div class="two-column-list">
+            <div class="column">
+              <h4>Lower Bound:</h4>
+              <p>
+                Interface temperature must exceed the glass transition
+                temperature (T<sub>g</sub>) of the liner material to enable
+                molecular mobility and wetting. For semi-crystalline polymers,
+                temperatures approaching or exceeding the melt temperature
+                (T<sub>m</sub>) may be required for optimal bonding.
+              </p>
+            </div>
+            <div class="column">
+              <h4>Upper Bound:</h4>
+              <p>Liner bulk temperature must remain below the threshold for:</p>
+              <ul>
+                <li>
+                  Structural collapse under internal pressure or self-weight
+                </li>
+                <li>Excessive thickness reduction from creep</li>
+                <li>Thermal degradation or oxidation</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4>Thermal Properties of Common Liner Materials</h4>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>T<sub>g</sub> (°C)</th>
+                  <th>T<sub>m</sub> (°C)</th>
+                  <th>Max Service Temp (°C)</th>
+                  <th>Critical Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HDPE</td>
+                  <td>-110</td>
+                  <td>130-135</td>
+                  <td>80-100</td>
+                  <td>
+                    Very low T<sub>g</sub>; always above glass transition at RT
+                  </td>
+                </tr>
+                <tr>
+                  <td>PA6</td>
+                  <td>47-71*</td>
+                  <td>220</td>
+                  <td>150-180</td>
+                  <td>
+                    T<sub>g</sub> moisture-dependent (*dry: ~71°C, wet: ~0°C)
+                  </td>
+                </tr>
+                <tr>
+                  <td>PA11</td>
+                  <td>42-46</td>
+                  <td>185-190</td>
+                  <td>130-150</td>
+                  <td>Lower T<sub>m</sub> than PA6</td>
+                </tr>
+                <tr>
+                  <td>PA12</td>
+                  <td>37-42</td>
+                  <td>175-180</td>
+                  <td>120-140</td>
+                  <td>Good chemical resistance</td>
+                </tr>
+                <tr>
+                  <td>PP</td>
+                  <td>-10 to 0</td>
+                  <td>160-165</td>
+                  <td>100-120</td>
+                  <td>Low cost option</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Composite Tape Processing Temperatures:</h4>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tape Material</th>
+                  <th>Processing Temp (°C)</th>
+                  <th>Nip Point Target (°C)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CF/PEEK</td>
+                  <td>380-400</td>
+                  <td>350-380</td>
+                </tr>
+                <tr>
+                  <td>CF/PEKK</td>
+                  <td>340-380</td>
+                  <td>320-360</td>
+                </tr>
+                <tr>
+                  <td>CF/PA6</td>
+                  <td>250-280</td>
+                  <td>220-260</td>
+                </tr>
+                <tr>
+                  <td>CF/PA12</td>
+                  <td>230-260</td>
+                  <td>200-240</td>
+                </tr>
+                <tr>
+                  <td>CF/PP</td>
+                  <td>180-220</td>
+                  <td>170-200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>3.2 Thermal Management Strategies</h3>
+
+          <div class="split-layout reverse">
+            <div class="split-image">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092e87ea67d8274af626f_3.png"
+                alt="Laser heat source power modulation for thermal management"
+              />
+            </div>
+            <div class="split-content">
+              <h4>Liner Pre-Heating:</h4>
+              <p>
+                Elevating liner temperature reduces the thermal gradient and
+                shock severity while promoting better wetting:
+              </p>
+              <ul>
+                <li>
+                  HDPE liners: Pre-heat to 60-80°C (below T<sub>m</sub> with
+                  safety margin)
+                </li>
+                <li>PA liners: Pre-heat to 80-120°C</li>
+                <li>
+                  Method: Infrared heaters, hot air circulation, heated mandrels
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h4>Layup Speed Reduction:</h4>
+          <p>
+            Slower deposition allows more time for heat conduction into the
+            liner, enabling surface temperatures to equilibrate:
+          </p>
+          <ul>
+            <li>Trade-off: Reduced productivity</li>
+            <li>
+              Typical adjustment: 50-70% speed for first ply versus steady-state
+            </li>
+          </ul>
+
+          <h4>Laser/Heat Source Power Modulation:</h4>
+          <p>
+            Closed-loop temperature control using pyrometry enables real-time
+            adjustment:
+          </p>
+          <ul>
+            <li>
+              Hoop versus axial layups require different power settings due to
+              varying dwell times
+            </li>
+            <li>
+              First-ply deposition onto dissimilar liner requires reduced power
+              to prevent burn-through
+            </li>
+          </ul>
+
+          <!-- Infographic Placeholder 4 -->
+          <div class="process-window-container">
+            <h4 class="process-window-title">
+              Process Window for CF/PA6 Tape onto PA6 Liner
+            </h4>
+            <p class="process-window-subtitle">
+              Temperature-speed operating envelope for thermoplastic tape
+              winding
+            </p>
+
+            <div class="process-window-content">
+              <!-- Chart Area -->
+              <div class="chart-area">
+                <!-- Y-Axis -->
+                <div class="y-axis">
+                  <span class="y-axis-label">Nip Temperature (°C)</span>
+                  <span class="y-tick">300</span>
+                  <span class="y-tick">280</span>
+                  <span class="y-tick">260</span>
+                  <span class="y-tick">240</span>
+                  <span class="y-tick">220</span>
+                  <span class="y-tick">200</span>
+                </div>
+
+                <!-- Process Chart -->
+                <div class="process-chart" id="processChart">
+                  <!-- Grid Lines -->
+                  <div class="grid-lines">
+                    <div class="grid-line-h" style="top: 20%"></div>
+                    <div class="grid-line-h" style="top: 40%"></div>
+                    <div class="grid-line-h" style="top: 60%"></div>
+                    <div class="grid-line-h" style="top: 80%"></div>
+                    <div class="grid-line-v" style="left: 20%"></div>
+                    <div class="grid-line-v" style="left: 40%"></div>
+                    <div class="grid-line-v" style="left: 60%"></div>
+                    <div class="grid-line-v" style="left: 80%"></div>
+                  </div>
+
+                  <!-- Insufficient Bonding Zone (Bottom) -->
+                  <div
+                    class="zone-layer insufficient-zone"
+                    data-zone="insufficient"
+                  ></div>
+
+                  <!-- Optimal Zone (Middle) -->
+                  <div
+                    class="zone-layer optimal-zone"
+                    data-zone="optimal"
+                  ></div>
+
+                  <!-- Liner Collapse Zone (Top) -->
+                  <div
+                    class="zone-layer collapse-zone"
+                    data-zone="collapse"
+                  ></div>
+
+                  <!-- Zone Labels -->
+                  <span class="zone-label collapse-label"
+                    >Liner Collapse Zone</span
+                  >
+                  <span class="zone-label optimal-label">Optimal Window</span>
+                  <span class="zone-label insufficient-label"
+                    >Insufficient Bonding</span
+                  >
+
+                  <!-- Optimal Point Marker -->
+                  <div class="optimal-point" data-zone="point"></div>
+                  <div class="optimal-point-label">~260°C @ 1.2 m/min</div>
+
+                  <!-- Boundary Lines SVG -->
+                  <svg
+                    style="
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 100%;
+                      pointer-events: none;
+                    "
+                  >
+                    <!-- Upper boundary -->
+                    <path
+                      d="M 0 64 Q 80 80 160 96 T 320 112 T 480 80"
+                      class="boundary-line"
+                      stroke="white"
+                    />
+                    <!-- Lower boundary -->
+                    <path
+                      d="M 0 176 Q 100 192 200 192 T 400 208 T 520 192"
+                      class="boundary-line"
+                      stroke="white"
+                    />
+                  </svg>
+
+                  <!-- Crosshairs -->
+                  <div class="crosshair-h" id="crosshairH"></div>
+                  <div class="crosshair-v" id="crosshairV"></div>
+
+                  <!-- Coordinate Display -->
+                  <div class="coord-display" id="coordDisplay">
+                    T: ---°C | v: --- m/min
+                  </div>
+
+                  <!-- Tooltip -->
+                  <div class="zone-tooltip" id="zoneTooltip">
+                    <div class="tooltip-header">
+                      <div class="tooltip-indicator"></div>
+                      <span class="tooltip-title"></span>
+                    </div>
+                    <div class="tooltip-params"></div>
+                    <div class="tooltip-desc"></div>
+                  </div>
+                </div>
+
+                <!-- X-Axis -->
+                <div class="x-axis">
+                  <div class="x-axis-ticks">
+                    <span class="x-tick">0</span>
+                    <span class="x-tick">0.5</span>
+                    <span class="x-tick">1.0</span>
+                    <span class="x-tick">1.5</span>
+                    <span class="x-tick">2.0</span>
+                    <span class="x-tick">2.5</span>
+                  </div>
+                  <div class="x-axis-label">Layup Speed (m/min)</div>
+                </div>
+              </div>
+
+              <!-- Info Panel -->
+              <div class="info-panel">
+                <div class="zone-card collapse" data-highlight="collapse">
+                  <div class="zone-card-header">
+                    <div class="zone-icon collapse">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="zone-card-title">Liner Collapse</span>
+                  </div>
+                  <div class="zone-card-params collapse">
+                    T > 280°C, v < 0.8 m/min
+                  </div>
+                  <div class="zone-card-desc">
+                    Excessive heat causes PA6 liner deformation and structural
+                    failure
+                  </div>
+                </div>
+
+                <div class="zone-card optimal" data-highlight="optimal">
+                  <div class="zone-card-header">
+                    <div class="zone-icon optimal">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="zone-card-title">Optimal Window</span>
+                  </div>
+                  <div class="zone-card-params optimal">
+                    T: 240-275°C, v: 0.8-2.0 m/min
+                  </div>
+                  <div class="zone-card-desc">
+                    Ideal consolidation with proper molecular diffusion and bond
+                    strength
+                  </div>
+                </div>
+
+                <div
+                  class="zone-card insufficient"
+                  data-highlight="insufficient"
+                >
+                  <div class="zone-card-header">
+                    <div class="zone-icon insufficient">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                    <span class="zone-card-title">Insufficient Bonding</span>
+                  </div>
+                  <div class="zone-card-params insufficient">
+                    T < 230°C, v > 1.5 m/min
+                  </div>
+                  <div class="zone-card-desc">
+                    Inadequate heat input results in weak interfacial adhesion
+                  </div>
+                </div>
+
+                <div class="process-params">
+                  <div class="params-title">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="3" />
+                      <path
+                        d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"
+                      />
+                    </svg>
+                    Recommended Settings
+                  </div>
+                  <div class="param-row">
+                    <span class="param-label">Nip Temperature</span>
+                    <span class="param-value">255-265°C</span>
+                  </div>
+                  <div class="param-row">
+                    <span class="param-label">Layup Speed</span>
+                    <span class="param-value">1.0-1.5 m/min</span>
+                  </div>
+                  <div class="param-row">
+                    <span class="param-label">Compaction Force</span>
+                    <span class="param-value">500-800 N</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-legend">
+              <div class="legend-item">
+                <div class="legend-box collapse"></div>
+                <span>Failure Zone (Liner Collapse)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box optimal"></div>
+                <span>Optimal Process Window</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-box insufficient"></div>
+                <span>Marginal Zone (Weak Bonding)</span>
+              </div>
+            </div>
+
+            <div class="process-source">
+              Source: Derived from filament winding optimization studies [1, 14]
+              <a href="https://doi.org/10.3390/polym16243488" target="_blank"
+                >DOI: 10.3390/polym16243488</a
+              >
+            </div>
+          </div>
+
+          <h3>3.3 Liner Compatibility Requirements</h3>
+
+          <div class="split-layout">
+            <div class="split-image">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/6968c741c2528d2128e8932e_4.png"
+                alt="Liner compatibility and material matching"
+              />
+            </div>
+            <div class="split-content">
+              <p>
+                For direct fusion bonding (without intermediate adhesive), the
+                liner and tape matrix should ideally share the same base polymer
+                to enable true autohesion:
+              </p>
+              <ul>
+                <li>
+                  <strong>CF/PA6 tape → PA6 liner:</strong> Compatible
+                  (molecular interdiffusion possible)
+                </li>
+                <li>
+                  <strong>CF/PEEK tape → HDPE liner:</strong> Incompatible (no
+                  interdiffusion; relies on mechanical interlocking and surface
+                  functionalization)
+                </li>
+              </ul>
+              <p>
+                When material systems are incompatible, surface activation
+                becomes critical, and bond strength expectations must be
+                adjusted accordingly.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Residual Stress and Warpage Section -->
+        <section id="residual-stress">
+          <h2>4. Residual Stress and Warpage: CTE Mismatch Effects</h2>
+
+          <h3>4.1 The CTE Mismatch Problem</h3>
+          <p>
+            The coefficient of thermal expansion mismatch between carbon fiber
+            composite overwrap and polymer liner materials represents a
+            fundamental source of residual stress accumulation.
+          </p>
+
+          <h4>Coefficient of Thermal Expansion Comparison</h4>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>CTE Longitudinal (ppm/°C)</th>
+                  <th>CTE Transverse (ppm/°C)</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Carbon Fiber (raw)</td>
+                  <td>-1.5 to +1.0</td>
+                  <td>7-30</td>
+                  <td>Negative in fiber direction</td>
+                </tr>
+                <tr>
+                  <td>UD CFRP (fiber dir)</td>
+                  <td>-0.5 to +1.5</td>
+                  <td>30-57</td>
+                  <td>Fiber-dominated</td>
+                </tr>
+                <tr>
+                  <td>Woven CFRP panel</td>
+                  <td>~1.5</td>
+                  <td>~5-15</td>
+                  <td>Balanced weave</td>
+                </tr>
+                <tr>
+                  <td>CF/PEEK</td>
+                  <td>~0 to +2</td>
+                  <td>25-40</td>
+                  <td>High-performance</td>
+                </tr>
+                <tr>
+                  <td>HDPE</td>
+                  <td>100-200</td>
+                  <td>100-200</td>
+                  <td>Isotropic</td>
+                </tr>
+                <tr>
+                  <td>PA6</td>
+                  <td>70-130</td>
+                  <td>70-130</td>
+                  <td>Isotropic</td>
+                </tr>
+                <tr>
+                  <td>PA6 + 60% GF</td>
+                  <td>~50</td>
+                  <td>~50</td>
+                  <td>Reduced by reinforcement</td>
+                </tr>
+                <tr>
+                  <td>PA6 + Nanocellulose</td>
+                  <td>~24</td>
+                  <td>~24</td>
+                  <td>Comparable to aluminum</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-number">50-200×</span>
+              <span class="stat-label">HDPE vs Carbon Fiber CTE</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">50-100×</span>
+              <span class="stat-label">PA6 vs Carbon Fiber CTE</span>
+            </div>
+          </div>
+
+          <h3>4.2 Residual Stress Mechanisms</h3>
+          <p>
+            Residual stresses develop during cooling from processing temperature
+            to ambient conditions:
+          </p>
+
+          <div class="feature-grid">
+            <div class="feature-item">
+              <span class="feature-icon">🔄</span>
+              <div>
+                <strong>Macro-Scale (Laminate Level):</strong> When plies with
+                different fiber orientations are bonded together, differential
+                contraction during cooling causes the laminate to warp. For an
+                asymmetric laminate or a liner-composite system, a
+                tension-bending couple forms, driving out-of-plane curvature.
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🔬</span>
+              <div>
+                <strong>Micro-Scale (Fiber-Matrix):</strong> Within the
+                composite, the large through-thickness CTE (~248 × 10⁻⁶/°C for
+                some filled thermoplastics versus <10 × 10⁻⁶/°C for carbon
+                fibers) induces interlaminar residual stresses that promote
+                delamination and matrix cracking.
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">⚡</span>
+              <div>
+                <strong>Interface-Scale:</strong> At the liner-composite
+                interface, the differential contraction creates interfacial
+                shear stresses that can exceed the bond strength, causing
+                debonding or delamination.
+              </div>
+            </div>
+          </div>
+
+          <h3>4.3 Consequences for Pressure Vessel Applications</h3>
+
+          <h4>Liner Collapse Mechanism:</h4>
+          <p>
+            During rapid depressurization of Type IV hydrogen vessels, the
+            composite overwrap (with lower CTE and higher stiffness) constrains
+            the liner's thermal contraction less than its pressure-induced
+            contraction. This creates a pressure differential at the liner-CFRP
+            interface:
+          </p>
+          <ul>
+            <li>
+              High internal pressure expands liner into tight contact with
+              composite
+            </li>
+            <li>
+              Rapid depressurization: Internal pressure drops faster than liner
+              can contract
+            </li>
+            <li>
+              Liner buckles inward into the gap between its equilibrium position
+              and the composite
+            </li>
+          </ul>
+
+          <h4>Contributing Factors:</h4>
+          <ul>
+            <li>
+              Higher maximum hydrogen pressure → greater pressure differential
+            </li>
+            <li>Faster depressurization rate → less time for equilibration</li>
+            <li>Lower residual pressure → larger pressure difference</li>
+            <li>Weak interfacial bonding → easier debonding initiation</li>
+          </ul>
+
+          <!-- Infographic Placeholder 5 -->
+
+          <div class="cte-container">
+            <div class="cte-header">
+              <h2 class="cte-title">
+                CTE Mismatch and Residual Stress Distribution
+              </h2>
+              <p class="cte-subtitle">
+                Thermal strain accommodation at the liner-composite interface
+                during cooling
+              </p>
+            </div>
+
+            <!-- States Comparison -->
+            <div class="states-section">
+              <!-- Hot State -->
+              <div class="state-card hot">
+                <div class="state-badge hot">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                      d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+                    />
+                  </svg>
+                  HOT STATE
+                </div>
+
+                <div class="layer-diagram">
+                  <div class="layer-row">
+                    <div class="layer-bar composite">CFRP Composite</div>
+                  </div>
+                  <div class="layer-row">
+                    <div class="layer-bar liner">PA Liner</div>
+                  </div>
+                </div>
+
+                <div class="cte-values">
+                  <div class="cte-item">
+                    <div class="cte-dot composite"></div>
+                    <span class="cte-text"
+                      ><strong>CFRP:</strong> α = 2-5 ppm/°C</span
+                    >
+                  </div>
+                  <div class="cte-item">
+                    <div class="cte-dot liner"></div>
+                    <span class="cte-text"
+                      ><strong>Liner:</strong> α = 80-100 ppm/°C</span
+                    >
+                  </div>
+                </div>
+
+                <div class="state-desc" style="margin-top: 16px">
+                  <div class="state-desc-icon equilibrium">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </div>
+                  <div class="state-desc-text">
+                    <strong>Equilibrium State</strong>
+                    Both materials at processing temperature. Same length, no
+                    residual stress present.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Transition Arrow -->
+              <div class="transition-arrow">
+                <div class="arrow-circle">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+                <div class="transition-label">Cooling</div>
+                <div class="transition-temp">ΔT ≈ 200°C</div>
+              </div>
+
+              <!-- Cold State -->
+              <div class="state-card cold">
+                <div class="state-badge cold">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 2v20M2 12h20M12 2l4 4M12 2l-4 4M12 22l4-4M12 22l-4-4M2 12l4 4M2 12l4-4M22 12l-4 4M22 12l-4-4"
+                    />
+                  </svg>
+                  COLD STATE
+                </div>
+
+                <div class="layer-diagram">
+                  <div class="layer-row">
+                    <div class="layer-bar composite">
+                      CFRP Composite (Constrains)
+                    </div>
+                  </div>
+                  <div class="layer-row">
+                    <div class="layer-bar liner compressed">
+                      PA Liner (Compressed)
+                      <div class="compression-arrows">
+                        <span class="arrow-in">→</span>
+                        <span class="arrow-in">←</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="cte-values">
+                  <div class="cte-item">
+                    <div class="cte-dot composite"></div>
+                    <span class="cte-text">Low contraction</span>
+                  </div>
+                  <div class="cte-item">
+                    <div class="cte-dot liner"></div>
+                    <span class="cte-text">Wants to shrink more</span>
+                  </div>
+                </div>
+
+                <div class="state-desc" style="margin-top: 16px">
+                  <div class="state-desc-icon stressed">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                  </div>
+                  <div class="state-desc-text">
+                    <strong>Stressed State</strong>
+                    Liner constrained by composite → Interfacial shear stress +
+                    liner compression.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stress Distribution Chart -->
+            <div class="chart-section">
+              <h3 class="chart-title">
+                Interfacial Shear Stress Distribution (τ)
+              </h3>
+
+              <div class="chart-wrapper">
+                <svg class="stress-chart-svg" viewBox="0 0 600 180">
+                  <defs>
+                    <linearGradient
+                      id="stressGradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                    >
+                      <stop
+                        offset="0%"
+                        style="stop-color: #bf3425; stop-opacity: 0.3"
+                      />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #bf3425; stop-opacity: 0.05"
+                      />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Y Axis -->
+                  <line x1="50" y1="20" x2="50" y2="140" class="axis-line" />
+                  <text
+                    x="20"
+                    y="85"
+                    class="axis-label"
+                    transform="rotate(-90, 20, 85)"
+                  >
+                    Shear Stress (τ)
+                  </text>
+
+                  <!-- X Axis -->
+                  <line x1="50" y1="140" x2="570" y2="140" class="axis-line" />
+                  <text x="310" y="170" class="axis-label" text-anchor="middle">
+                    Position along interface
+                  </text>
+
+                  <!-- Zero reference line -->
+                  <line x1="50" y1="120" x2="570" y2="120" class="zero-line" />
+                  <text x="40" y="124" class="tick-label" text-anchor="end">
+                    τ=0
+                  </text>
+
+                  <!-- Tick marks on X axis -->
+                  <text x="50" y="155" class="tick-label" text-anchor="middle">
+                    Edge
+                  </text>
+                  <text x="310" y="155" class="tick-label" text-anchor="middle">
+                    Center
+                  </text>
+                  <text x="570" y="155" class="tick-label" text-anchor="middle">
+                    Edge
+                  </text>
+
+                  <!-- Stress curve area fill -->
+                  <path
+                    d="M 50 120 Q 100 110 150 80 Q 220 40 310 30 Q 400 40 460 80 Q 510 110 570 120 L 570 120 L 50 120 Z"
+                    class="stress-area"
+                  />
+
+                  <!-- Stress curve line -->
+                  <path
+                    d="M 50 120 Q 100 110 150 80 Q 220 40 310 30 Q 400 40 460 80 Q 510 110 570 120"
+                    class="stress-curve"
+                  />
+
+                  <!-- Peak annotation -->
+                  <circle cx="310" cy="30" r="5" fill="#bf3425" />
+                  <text
+                    x="310"
+                    y="18"
+                    class="annotation-text peak-label"
+                    text-anchor="middle"
+                  >
+                    τ_max
+                  </text>
+
+                  <!-- Edge effect annotations -->
+                  <text x="100" y="65" class="annotation-text edge-label">
+                    Edge effect
+                  </text>
+                  <line
+                    x1="140"
+                    y1="92"
+                    x2="155"
+                    y2="82"
+                    stroke="#64748b"
+                    stroke-width="1"
+                  />
+
+                  <text
+                    x="510"
+                    y="65"
+                    class="annotation-text edge-label"
+                    text-anchor="end"
+                  >
+                    Edge effect
+                  </text>
+                  <line
+                    x1="470"
+                    y1="92"
+                    x2="455"
+                    y2="82"
+                    stroke="#64748b"
+                    stroke-width="1"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Key Insights -->
+            <div class="insights-grid">
+              <div class="insight-card shear">
+                <div class="insight-icon shear">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M17 1l4 4-4 4" />
+                    <path d="M3 11V9a4 4 0 014-4h14" />
+                    <path d="M7 23l-4-4 4-4" />
+                    <path d="M21 13v2a4 4 0 01-4 4H3" />
+                  </svg>
+                </div>
+                <h4 class="insight-title">Interfacial Shear Stress</h4>
+                <p class="insight-desc">
+                  Develops at the liner-composite interface due to differential
+                  thermal contraction. Maximum at center, reduces toward edges
+                  where stress concentration occurs.
+                </p>
+              </div>
+
+              <div class="insight-card compression">
+                <div class="insight-icon compression">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M16 4h2a2 2 0 012 2v12a2 2 0 01-2 2h-2" />
+                    <path d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h2" />
+                    <path d="M12 2v20" />
+                    <path d="M9 12l3-3 3 3" />
+                    <path d="M9 12l3 3 3-3" />
+                  </svg>
+                </div>
+                <h4 class="insight-title">Liner Compression</h4>
+                <p class="insight-desc">
+                  Liner experiences compressive hoop stress as it's constrained
+                  from free thermal contraction by the stiffer composite
+                  overwrap structure.
+                </p>
+              </div>
+
+              <div class="insight-card edge">
+                <div class="insight-icon edge">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v4l3 3" />
+                  </svg>
+                </div>
+                <h4 class="insight-title">Edge Effects</h4>
+                <p class="insight-desc">
+                  Stress concentration at interface edges can initiate
+                  delamination. Critical design consideration for hydrogen tank
+                  liner integrity.
+                </p>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="chart-legend">
+              <div class="legend-item">
+                <div class="legend-color composite"></div>
+                <span class="legend-text">CFRP Composite (α = 2-5 ppm/°C)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color liner"></div>
+                <span class="legend-text">PA Liner (α = 80-100 ppm/°C)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color stress"></div>
+                <span class="legend-text">Shear Stress Distribution</span>
+              </div>
+            </div>
+
+            <p class="source-text">
+              Source: Based on residual stress modeling [15, 16]
+              <a href="https://doi.org/10.1002/pc.25934" target="_blank"
+                >DOI: 10.1002/pc.25934</a
+              >
+            </p>
+          </div>
+          <h3>4.4 Mitigation Strategies</h3>
+
+          <div class="conclusions-grid">
+            <div class="conclusion-card">
+              <span class="conclusion-number">1</span>
+              <h4>Material Selection</h4>
+              <p>
+                Use liner materials with lower CTE (reinforced PA > neat PA >
+                HDPE). Consider nanofiller reinforcement to reduce liner CTE
+                toward composite values.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">2</span>
+              <h4>Process Optimization</h4>
+              <p>
+                Controlled cooling rates to allow stress relaxation. Staged
+                cooling with intermediate holds near T<sub>g</sub>. Fiber
+                prestressing to offset thermal contraction.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">3</span>
+              <h4>Design Considerations</h4>
+              <p>
+                Symmetric layups where possible. Gradual transition regions at
+                dome-cylinder junctions. Avoid sharp thickness changes.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Case Study Analysis Section -->
+        <section id="case-studies">
+          <h2>5. Case Study Analysis</h2>
+
+          <h3>5.1 Hydrogen Composite Overwrapped Pressure Vessels (COPVs)</h3>
+
+          <p>
+            <strong>Application Context:</strong> Type IV and emerging Type V
+            COPVs are critical enablers for hydrogen mobility, requiring storage
+            at 350-700 bar with minimal weight penalty. The interface between
+            polymer liner and carbon fiber composite overwrap directly impacts:
+          </p>
+          <ul>
+            <li>Structural integrity under cyclic pressurization</li>
+            <li>Hydrogen permeability and leakage rates</li>
+            <li>
+              Resistance to liner collapse during rapid refueling/discharge
+            </li>
+          </ul>
+
+          <div class="split-layout reverse">
+            <div class="split-image">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092b4f74468983d8286a4_5.png"
+                alt="Type IV COPV hydrogen storage vessel"
+              />
+            </div>
+            <div class="split-content">
+              <h4>Liner Material Selection:</h4>
+              <div class="data-table-container">
+                <table class="data-table comparison-matrix">
+                  <thead>
+                    <tr>
+                      <th>Property</th>
+                      <th>HDPE</th>
+                      <th>PA6</th>
+                      <th>PA11</th>
+                      <th>Best for H₂</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>H₂ Permeability</td>
+                      <td>Highest</td>
+                      <td>Lower</td>
+                      <td>Lower</td>
+                      <td>PA6</td>
+                    </tr>
+                    <tr>
+                      <td>Cost</td>
+                      <td>Lowest</td>
+                      <td>Medium</td>
+                      <td>Higher</td>
+                      <td>HDPE</td>
+                    </tr>
+                    <tr>
+                      <td>CTE Match</td>
+                      <td>Poor</td>
+                      <td>Fair</td>
+                      <td>Fair</td>
+                      <td>PA6</td>
+                    </tr>
+                    <tr>
+                      <td>Moisture Sensitivity</td>
+                      <td>None</td>
+                      <td>High</td>
+                      <td>Low</td>
+                      <td>HDPE, PA11</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <h4>Hydrogen Permeability Data:</h4>
+          <p>At 288 K and 70 MPa:</p>
+          <ul>
+            <li>PA6 exhibits the strongest hydrogen permeation resistance</li>
+            <li>
+              PA11 has approximately 12.5% higher diffusion coefficient than PA6
+            </li>
+            <li>
+              HDPE has approximately 350% higher diffusion coefficient than PA6
+            </li>
+          </ul>
+          <p>
+            The GTR 13 international standard specifies maximum allowable
+            hydrogen permeation rate of 46 Ncm³·h⁻¹·L⁻¹ at 1.15× nominal working
+            pressure and 55°C.
+          </p>
+
+          <div class="highlight-box">
+            <h4>Interface Enhancement Case Study:</h4>
+            <p>
+              The nanosecond pulsed laser treatment study demonstrated that
+              optimized surface preparation can dramatically improve interface
+              integrity:
+            </p>
+            <ul>
+              <li>
+                <strong>Problem:</strong> Weak PA11-CFRP bonding contributes to
+                liner collapse risk
+              </li>
+              <li>
+                <strong>Solution:</strong> Laser texturing at 400 mm/s, 20 kHz,
+                12.7 W
+              </li>
+              <li>
+                <strong>Result:</strong> 8.35× improvement in flatwise tensile
+                strength
+              </li>
+              <li>
+                <strong>Implication:</strong> Reduced risk of interface
+                debonding during pressure cycling
+              </li>
+            </ul>
+          </div>
+
+          <!-- Figure 6 -->
+          <div class="split-layout">
+            <div class="split-image">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092b4d63657b07ef6cab3_6.png"
+                alt="Type IV COPV cross-section and interface detail"
+              />
+            </div>
+            <div class="split-content">
+              <h4>Figure 6: Type IV COPV Cross-Section and Interface Detail</h4>
+              <p>
+                Cross-sectional view of Type IV COPV showing (a) overall vessel
+                construction with polymer liner, composite overwrap, and
+                metallic bosses, and (b) detail of liner-composite interface
+                with surface treatment features.
+              </p>
+            </div>
+          </div>
+
+          <!-- Infographic Placeholder 6 -->
+          <div class="copv-container">
+            <h4 class="copv-title">
+              Type IV COPV Structure and Interface Design
+            </h4>
+            <p class="copv-subtitle">
+              Composite Overwrapped Pressure Vessel for hydrogen storage
+              applications
+            </p>
+
+            <div class="copv-content">
+              <!-- (a) COPV Cross-Section -->
+              <div class="copv-cross-section">
+                <div class="section-header">
+                  <span class="section-label">(a)</span>
+                  <span class="section-title">COPV Cross-Section</span>
+                </div>
+
+                <div class="cross-section-diagram">
+                  <div class="copv-vessel">
+                    <!-- Metallic Boss -->
+                    <div class="layer-boss" data-layer="boss"></div>
+
+                    <!-- CFRP Composite Overwrap -->
+                    <div class="layer-composite" data-layer="composite"></div>
+
+                    <!-- Polymer Liner -->
+                    <div class="layer-liner" data-layer="liner"></div>
+
+                    <!-- H2 Storage -->
+                    <div class="layer-storage" data-layer="storage">
+                      <div class="h2-molecules">
+                        <span class="molecule">H₂</span>
+                        <span class="molecule">H₂</span>
+                        <span class="molecule">H₂</span>
+                        <span class="molecule">H₂</span>
+                        <span class="molecule">H₂</span>
+                      </div>
+                      <span class="h2-symbol"
+                        >H<span class="h2-subscript">2</span></span
+                      >
+                      <span class="storage-label">Storage Volume</span>
+                      <span class="storage-pressure">350-700 bar</span>
+                    </div>
+
+                    <!-- Labels (shown on hover) -->
+                    <div class="layer-label label-boss">Metallic Boss</div>
+                    <div class="layer-label label-composite">
+                      CFRP Composite
+                    </div>
+                    <div class="layer-label label-liner">Polymer Liner</div>
+
+                    <!-- Connector lines -->
+                    <div class="connector-line conn-boss"></div>
+                    <div class="connector-line conn-composite"></div>
+                    <div class="connector-line conn-liner"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- (b) Interface Detail -->
+              <div class="interface-detail">
+                <div class="section-header">
+                  <span class="section-label">(b)</span>
+                  <span class="section-title"
+                    >Interface Detail (Laser-Treated)</span
+                  >
+                </div>
+
+                <div class="interface-diagram">
+                  <!-- CFRP Matrix -->
+                  <div
+                    class="interface-layer cfrp-matrix"
+                    data-interface="cfrp"
+                  >
+                    <span class="matrix-label">CFRP Matrix</span>
+                  </div>
+
+                  <!-- Infiltration Zone -->
+                  <div
+                    class="interface-layer infiltration-zone"
+                    data-interface="infiltration"
+                  ></div>
+
+                  <!-- Grooves with infiltration -->
+                  <div class="grooves-container">
+                    <div class="groove">
+                      <div class="groove-wall left"></div>
+                      <div class="groove-fill"></div>
+                      <div class="groove-wall right"></div>
+                    </div>
+                    <div class="groove">
+                      <div class="groove-wall left"></div>
+                      <div class="groove-fill"></div>
+                      <div class="groove-wall right"></div>
+                    </div>
+                    <div class="groove">
+                      <div class="groove-wall left"></div>
+                      <div class="groove-fill"></div>
+                      <div class="groove-wall right"></div>
+                    </div>
+                    <div class="groove">
+                      <div class="groove-wall left"></div>
+                      <div class="groove-fill"></div>
+                      <div class="groove-wall right"></div>
+                    </div>
+                    <div class="groove">
+                      <div class="groove-wall left"></div>
+                      <div class="groove-fill"></div>
+                      <div class="groove-wall right"></div>
+                    </div>
+                    <div class="groove">
+                      <div class="groove-wall left"></div>
+                      <div class="groove-fill"></div>
+                      <div class="groove-wall right"></div>
+                    </div>
+                  </div>
+
+                  <!-- PA11 Liner Base -->
+                  <div
+                    class="interface-layer liner-base"
+                    data-interface="liner"
+                  >
+                    <span class="liner-label">PA11 Liner</span>
+                  </div>
+
+                  <!-- Dimension annotations -->
+                  <div class="dimension-annotation dim-spacing">
+                    <div class="dim-line-h"></div>
+                    <span>50-100 μm</span>
+                  </div>
+
+                  <div class="dimension-annotation dim-depth">
+                    <div class="dim-line-v"></div>
+                    <span>10-30 μm</span>
+                  </div>
+
+                  <!-- Zoom indicator -->
+                  <div class="zoom-indicator">
+                    <svg
+                      class="zoom-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="M21 21l-4.35-4.35" />
+                      <path d="M11 8v6M8 11h6" />
+                    </svg>
+                    Interface Magnification
+                  </div>
+                </div>
+
+                <div class="interface-labels">
+                  <div class="interface-label-item cfrp">
+                    <div class="label-icon cfrp">CF</div>
+                    <div class="label-text">
+                      <strong>CFRP Matrix</strong>
+                      Resin infiltrates surface features
+                    </div>
+                  </div>
+                  <div class="interface-label-item infiltration">
+                    <div class="label-icon infiltration">↓</div>
+                    <div class="label-text">
+                      <strong>Infiltrated Grooves</strong>
+                      Mechanical interlocking zone
+                    </div>
+                  </div>
+                  <div class="interface-label-item liner">
+                    <div class="label-icon liner">PA</div>
+                    <div class="label-text">
+                      <strong>PA11 Liner</strong>
+                      Laser-textured surface
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tooltip -->
+            <div class="copv-tooltip" id="copvTooltip">
+              <div class="tooltip-header">
+                <div class="tooltip-dot"></div>
+                <span class="tooltip-title"></span>
+              </div>
+              <div class="tooltip-desc"></div>
+            </div>
+
+            <!-- Legend -->
+            <div class="copv-legend">
+              <div class="legend-item">
+                <div class="legend-swatch boss"></div>
+                <span>Metallic Boss (Al/Steel)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-swatch composite"></div>
+                <span>CFRP Composite</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-swatch liner"></div>
+                <span>Polymer Liner (PA11/PA6/HDPE)</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-swatch h2"></div>
+                <span>H₂ Storage Volume</span>
+              </div>
+            </div>
+
+            <div class="copv-source">
+              Source: Based on COPV design standards and laser treatment studies
+              [3, 11]
+              <a
+                href="https://doi.org/10.1016/j.ijhydene.2023.12.304"
+                target="_blank"
+                >DOI: 10.1016/j.ijhydene.2023.12.304</a
+              >
+            </div>
+          </div>
+
+          <h3>
+            5.2 Automotive Structural Reinforcement: B-Pillar Over-Molding
+          </h3>
+
+          <p>
+            <strong>Application Context:</strong> Automotive B-pillars (center
+            pillars) are critical structural members for side-impact protection.
+            Hybrid manufacturing approaches combine steel or aluminum stampings
+            with composite reinforcements to achieve weight reduction while
+            meeting crashworthiness requirements.
+          </p>
+
+          <h4>Hybrid Molding Approach:</h4>
+          <ul>
+            <li>
+              Organosheet (e.g., 47 vol-% glass fabric/PA6) is
+              compression-molded as carrier
+            </li>
+            <li>
+              Short-fiber reinforced polymer (e.g., 30 wt-% glass/PA6/6) is
+              injection over-molded for ribs
+            </li>
+            <li>
+              Expanding adhesive (epoxy-based foam) bonds composite to metal
+              structure
+            </li>
+          </ul>
+
+          <div class="key-question">
+            <p>
+              Weight Reduction Achieved: 67.37% compared to steel reinforcements
+              while maintaining crashworthiness requirements
+            </p>
+          </div>
+
+          <h4>Interface Considerations:</h4>
+          <ul>
+            <li>
+              <strong>PA6 carrier + PA6 overmold:</strong> Same-polymer system
+              enables fusion bonding
+            </li>
+            <li>
+              <strong>Composite-metal interface:</strong> Requires adhesive
+              bonding with surface preparation
+            </li>
+            <li>
+              <strong>Expanding adhesive:</strong> Accommodates tolerance
+              variations and fills gaps
+            </li>
+          </ul>
+
+          <!-- Figure 7 -->
+          <div class="split-layout reverse">
+            <div class="split-image">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092b4c9cb7bf5c63f0adf_7.png"
+                alt="Automotive B-pillar hybrid structure"
+              />
+            </div>
+            <div class="split-content">
+              <h4>Figure 7: Automotive B-Pillar Hybrid Structure</h4>
+              <p>
+                Exploded view of hybrid B-pillar construction showing steel
+                outer panel, composite reinforcement insert (compression-molded
+                organosheet + injection over-molded ribs), and adhesive
+                interface layer.
+              </p>
+            </div>
+          </div>
+
+          <!-- Infographic Placeholder 7 -->
+          <div class="hybrid-panel-container">
+            <h4 class="hybrid-panel-title">
+              Hybrid Automotive Panel Structure
+            </h4>
+            <p class="hybrid-panel-subtitle">
+              Steel-composite hybrid construction with over-molded reinforcement
+              ribs
+            </p>
+
+            <div class="hybrid-content">
+              <!-- Panel Visualization -->
+              <div class="panel-visualization">
+                <div class="viz-title">Layered Assembly Cross-Section</div>
+
+                <div class="panel-assembly">
+                  <div class="panel-3d" id="panel3d">
+                    <!-- Steel Outer Panel -->
+                    <div class="panel-layer layer-steel" data-layer="steel">
+                      <span class="layer-label">Steel Outer Panel</span>
+                    </div>
+
+                    <!-- Expanding Adhesive -->
+                    <div
+                      class="panel-layer layer-adhesive"
+                      data-layer="adhesive"
+                    >
+                      <span class="layer-label">Expanding Adhesive</span>
+                      <span class="adhesive-expand-indicator"
+                        >↕ Heat-activated expansion</span
+                      >
+                    </div>
+
+                    <!-- GF/PA6 Organosheet -->
+                    <div
+                      class="panel-layer layer-organosheet"
+                      data-layer="organosheet"
+                    >
+                      <span class="layer-label">GF/PA6 Organosheet</span>
+                    </div>
+
+                    <!-- Over-molded Ribs -->
+                    <div
+                      class="panel-layer layer-ribs-container"
+                      data-layer="ribs"
+                    >
+                      <div class="ribs-label">
+                        Over-molded Ribs<br />(30% GF/PA6/6)
+                      </div>
+                      <div class="ribs-row">
+                        <div class="rib"></div>
+                        <div class="rib"></div>
+                        <div class="rib"></div>
+                        <div class="rib"></div>
+                        <div class="rib"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Explode Toggle -->
+                  <button class="explode-toggle" id="explodeToggle">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                    </svg>
+                    Explode View
+                  </button>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="process-steps">
+                  <div class="process-step">
+                    <div class="step-number">1</div>
+                    <span class="step-label">Compression<br />Molding</span>
+                  </div>
+                  <div class="process-step">
+                    <div class="step-number">2</div>
+                    <span class="step-label">Over-<br />molding</span>
+                  </div>
+                  <div class="process-step">
+                    <div class="step-number">3</div>
+                    <span class="step-label">Adhesive<br />Application</span>
+                  </div>
+                  <div class="process-step">
+                    <div class="step-number">4</div>
+                    <span class="step-label">Heat<br />Bonding</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Info Panel -->
+              <div class="info-panel">
+                <div class="layer-card steel" data-highlight="steel">
+                  <div class="card-header">
+                    <div class="card-icon steel">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="card-title">Steel Outer Panel</div>
+                      <div class="card-subtitle">Class A Surface</div>
+                    </div>
+                  </div>
+                  <div class="card-desc">
+                    Exterior surface for aesthetics and corrosion protection
+                  </div>
+                </div>
+
+                <div class="layer-card adhesive" data-highlight="adhesive">
+                  <div class="card-header">
+                    <div class="card-icon adhesive">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12 2v10M12 22v-6M4.93 4.93l7.07 7.07M19.07 19.07l-7.07-7.07"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="card-title">Expanding Adhesive</div>
+                      <div class="card-subtitle">Heat-Activated</div>
+                    </div>
+                  </div>
+                  <div class="card-desc">
+                    Expands during e-coat cure to fill gaps and bond layers
+                  </div>
+                </div>
+
+                <div
+                  class="layer-card organosheet"
+                  data-highlight="organosheet"
+                >
+                  <div class="card-header">
+                    <div class="card-icon organosheet">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M4 4h16v16H4z" />
+                        <path d="M4 12h16M12 4v16" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="card-title">GF/PA6 Organosheet</div>
+                      <div class="card-subtitle">Compression Molded</div>
+                    </div>
+                  </div>
+                  <div class="card-desc">
+                    Continuous fiber reinforced thermoplastic base structure
+                  </div>
+                </div>
+
+                <div class="layer-card ribs" data-highlight="ribs">
+                  <div class="card-header">
+                    <div class="card-icon ribs">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M3 21h18M5 21V7l7-4 7 4v14" />
+                        <path d="M9 21v-8h6v8" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="card-title">Over-molded Ribs</div>
+                      <div class="card-subtitle">30% GF/PA6/6</div>
+                    </div>
+                  </div>
+                  <div class="card-desc">
+                    Injection molded reinforcement for stiffness and load paths
+                  </div>
+                </div>
+
+                <!-- Weight Savings -->
+                <div class="weight-savings">
+                  <div class="savings-label">Weight Reduction</div>
+                  <div class="savings-value">67%</div>
+                  <div class="savings-compare">vs. Steel Reinforcement</div>
+
+                  <div class="weight-comparison">
+                    <div class="comparison-row">
+                      <span class="comparison-label">Steel</span>
+                      <div class="comparison-bar">
+                        <div class="comparison-fill steel"></div>
+                        <span class="comparison-value">100%</span>
+                      </div>
+                    </div>
+                    <div class="comparison-row">
+                      <span class="comparison-label">Hybrid</span>
+                      <div class="comparison-bar">
+                        <div class="comparison-fill hybrid"></div>
+                        <span class="comparison-value">33%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tooltip -->
+            <div class="hybrid-tooltip" id="hybridTooltip">
+              <div class="tooltip-title"></div>
+              <div class="tooltip-desc"></div>
+            </div>
+
+            <!-- Legend -->
+            <div class="hybrid-legend">
+              <div class="legend-item">
+                <div class="legend-swatch steel"></div>
+                <span>Steel Panel</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-swatch adhesive"></div>
+                <span>Expanding Adhesive</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-swatch organosheet"></div>
+                <span>GF/PA6 Organosheet</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-swatch ribs"></div>
+                <span>Over-molded Ribs</span>
+              </div>
+            </div>
+
+            <div class="hybrid-source">
+              Source: Based on automotive hybrid structure studies [23, 24]
+              <a href="https://doi.org/10.3390/ma14082047" target="_blank"
+                >DOI: 10.3390/ma14082047</a
+              >
+            </div>
+          </div>
+
+          <h3>5.3 Comparative Failure Mode Analysis</h3>
+          <p>
+            Understanding whether failures occur at the interface (adhesive
+            failure) or within the substrate (cohesive failure) provides
+            critical feedback on surface treatment effectiveness:
+          </p>
+
+          <h4>Failure Mode Analysis by Surface Treatment</h4>
+          <div class="data-table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Treatment</th>
+                  <th>Typical Failure Mode</th>
+                  <th>Interpretation</th>
+                  <th>Action Required</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Untreated</td>
+                  <td>Adhesive (interface)</td>
+                  <td>Interface is weak link</td>
+                  <td>Surface activation needed</td>
+                </tr>
+                <tr>
+                  <td>Plasma (short)</td>
+                  <td>Mixed</td>
+                  <td>Partial improvement</td>
+                  <td>Extend treatment time</td>
+                </tr>
+                <tr>
+                  <td>Plasma (optimized)</td>
+                  <td>Cohesive (adhesive layer)</td>
+                  <td>Interface stronger than adhesive</td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Grit blast only</td>
+                  <td>Mixed to adhesive</td>
+                  <td>Limited chemical activation</td>
+                  <td>Add plasma or primer</td>
+                </tr>
+                <tr>
+                  <td>Laser + Plasma</td>
+                  <td>Cohesive (substrate)</td>
+                  <td>Optimal—substrate is weak link</td>
+                  <td>Treatment successful</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="highlight-box">
+            <h4>Key Insight:</h4>
+            <p>
+              Achieving cohesive failure in the substrate indicates the
+              interface is no longer the weakest link in the system. This is the
+              target outcome for surface treatment optimization.
+            </p>
+          </div>
+        </section>
+
+        <!-- Future Directions Section -->
+        <section id="future-directions">
+          <h2>6. Future Directions and Research Gaps</h2>
+
+          <h3>6.1 Identified Research Gaps</h3>
+
+          <div class="conclusions-grid">
+            <div class="conclusion-card">
+              <span class="conclusion-number">1</span>
+              <h4>Long-Term Durability Data</h4>
+              <p>
+                Most surface treatment studies report initial bond strength;
+                fatigue and aging data under realistic service conditions
+                (temperature cycling, hydrogen exposure, moisture) remain
+                limited.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">2</span>
+              <h4>In-Situ Process Monitoring</h4>
+              <p>
+                Real-time quality assurance methods for interface bonding during
+                robotic over-printing are underdeveloped. Thermography and
+                acoustic methods show promise but require validation.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">3</span>
+              <h4>Type V Vessel Development</h4>
+              <p>
+                Linerless composite pressure vessels eliminate the
+                liner-overwrap interface entirely, representing a paradigm
+                shift. However, resin permeability and damage tolerance
+                challenges remain.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">4</span>
+              <h4>Multi-Material Gradient Interfaces</h4>
+              <p>
+                Functionally graded interfaces that transition gradually from
+                liner to composite properties could reduce stress concentrations
+                but are not yet manufacturable at scale.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">5</span>
+              <h4>Standardized Testing Protocols</h4>
+              <p>
+                Lack of standardized test methods specifically for
+                liner-composite interface characterization limits cross-study
+                comparisons.
+              </p>
+            </div>
+          </div>
+
+          <h3>6.2 Emerging Technologies</h3>
+          <div class="split-image">
+            <img
+              src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/6978d40b191372369c11399e_8.png"
+              alt="Emerging technologies in composite manufacturing"
+            />
+          </div>
+          <div>
+            <h4>Combined Surface Treatments:</h4>
+            <p>
+              The synergistic laser-plasma approach demonstrates that combining
+              multiple activation mechanisms yields superior results to either
+              treatment alone.
+            </p>
+
+            <h4>Nanocomposite Liners:</h4>
+            <p>
+              PA6 reinforced with organoclay (montmorillonite) nanofillers shows
+              promise for reducing hydrogen permeability while maintaining or
+              improving mechanical properties. However, agglomeration and
+              crystallinity changes must be carefully managed.
+            </p>
+
+            <h4>Machine Learning Process Optimization:</h4>
+            <p>
+              Closed-loop control systems using thermal imaging feedback and
+              machine-learned heating profiles are enabling unprecedented
+              process consistency in thermoplastic tape winding.
+            </p>
+          </div>
+        </section>
+
+        <!-- Conclusions Section -->
+        <section id="conclusions">
+          <h2>7. Conclusions</h2>
+
+          <p>
+            The interface between continuous fiber composite overwrap and
+            prefabricated polymer liner represents the critical weak link in
+            hybrid manufacturing systems for pressure vessels and structural
+            reinforcements. This review has established:
+          </p>
+
+          <div class="conclusions-grid">
+            <div class="conclusion-card">
+              <span class="conclusion-number">1</span>
+              <h4>Thermal Management is Critical</h4>
+              <p>
+                The temperature differential between hot tape (>300°C) and cold
+                liner creates competing failure modes. Successful bonding
+                requires maintaining the interface within a narrow process
+                window bounded by insufficient bonding (too cold) and liner
+                collapse (too hot).
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">2</span>
+              <h4>Surface Activation is Essential</h4>
+              <p>
+                The low surface energy of polyolefins and semi-crystalline
+                polymers necessitates surface treatment. Atmospheric plasma
+                treatment provides 2-4× improvements in bond strength, while
+                nanosecond pulsed laser treatment achieves up to 8.35×
+                improvement for PA11-CFRP interfaces.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">3</span>
+              <h4>CTE Mismatch Drives Residual Stress</h4>
+              <p>
+                The 50-200× difference in CTE between carbon fiber composites
+                and liner materials generates interfacial stresses that
+                accumulate during cooling and contribute to long-term failure
+                modes including liner collapse during pressure cycling.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">4</span>
+              <h4>Failure Mode Analysis Guides Optimization</h4>
+              <p>
+                Surface treatment is successful when failure transitions from
+                adhesive (interface) to cohesive (substrate). This indicates the
+                interface is no longer the weakest link.
+              </p>
+            </div>
+            <div class="conclusion-card">
+              <span class="conclusion-number">5</span>
+              <h4>Material Selection Involves Trade-offs</h4>
+              <p>
+                PA6 offers superior hydrogen barrier properties and better CTE
+                match to composites, while HDPE offers lower cost and moisture
+                insensitivity. Surface treatment can partially compensate for
+                material limitations.
+              </p>
+            </div>
+          </div>
+
+          <div class="final-statement">
+            <p>
+              For engineers designing robotic over-printing systems for hybrid
+              composite structures, the key recommendations are: match liner and
+              tape matrix polymers where possible for fusion bonding; implement
+              surface activation (plasma minimum; laser-plasma combination
+              optimal); use closed-loop thermal control with first-ply-specific
+              parameters; design for CTE mismatch through material selection and
+              process optimization; and validate interfaces with fatigue testing
+              representative of service conditions.
+            </p>
+          </div>
+
+          <img
+            src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/698092b3fc3ac5eebb59a496_9.png"
+            alt="Advanced composite manufacturing conclusion"
+            class="full-width-image"
+          />
+        </section>
+
+        <!-- References Section -->
+        <section id="references">
+          <h2>References</h2>
+
+          <div class="references-list">
+            <p>
+              [1] Composites World, "Challenges of laser-assisted tape winding
+              of thermoplastic composites," 2024. Available:
+              <a
+                href="https://www.compositesworld.com/articles/challenges-of-laser-assisted-tape-winding-of-thermoplastic-composites"
+                target="_blank"
+                >compositesworld.com</a
+              >
+            </p>
+
+            <p>
+              [2] C. M. Stokes-Griffin and P. Compston, "Review: Filament
+              Winding and Automated Fiber Placement with In Situ Consolidation
+              for Fiber Reinforced Thermoplastic Polymer Composites,"
+              <em>Polymers</em>, vol. 13, no. 12, p. 1951, 2021. DOI:
+              10.3390/polym13121951
+            </p>
+
+            <p>
+              [3] NASA, "Composite Overwrapped Pressure Vessels: A Primer,"
+              NASA/SP-2011-573, 2011. Available:
+              <a
+                href="https://ntrs.nasa.gov/api/citations/20110008406/downloads/20110008406.pdf"
+                target="_blank"
+                >ntrs.nasa.gov</a
+              >
+            </p>
+
+            <p>
+              [4] Wikipedia, "Composite overwrapped pressure vessel," 2024.
+              Available:
+              <a
+                href="https://en.wikipedia.org/wiki/Composite_overwrapped_pressure_vessel"
+                target="_blank"
+                >wikipedia.org</a
+              >
+            </p>
+
+            <p>
+              [5] I. Fernández et al., "Adhesion Improvement of
+              Thermoplastics-Based Composites by Atmospheric Plasma and UV
+              Treatments," <em>Applied Composite Materials</em>, vol. 28, pp.
+              71-89, 2021. DOI: 10.1007/s10443-020-09854-y
+            </p>
+
+            <p>
+              [6] D. Hegemann et al., "The Ageing of μPlasma-Modified Polymers:
+              The Role of Hydrophilicity," <em>Materials</em>, vol. 17, no. 6,
+              p. 1402, 2024. DOI: 10.3390/ma17061402
+            </p>
+
+            <p>
+              [7] CompositesWorld, "Surface treatment for adhesive bonding:
+              Thermoset vs. thermoplastic composites," 2023. Available:
+              <a
+                href="https://www.compositesworld.com/articles/surface-treatment-for-adhesive-bonding-thermoset-vs-thermoplastic-composites"
+                target="_blank"
+                >compositesworld.com</a
+              >
+            </p>
+
+            <p>
+              [8] M. Kanerva et al., "Strength and failure modes of surface
+              treated CFRP secondary bonded single-lap joints in static and
+              fatigue tensile loading regimes," <em>Composites Part A</em>, vol.
+              137, p. 106022, 2020. DOI: 10.1016/j.compositesa.2020.106022
+            </p>
+
+            <p>
+              [9] K. Leistner et al., "A study of laser surface treatment in
+              bonded repair of composite aircraft structures,"
+              <em>Royal Society Open Science</em>, vol. 5, no. 3, p. 171272,
+              2018. DOI: 10.1098/rsos.171272
+            </p>
+
+            <p>
+              [10] C. Leone et al., "On the Ablation Behavior of Carbon
+              Fiber-Reinforced Plastics during Laser Surface Treatment Using
+              Pulsed Lasers," <em>Materials</em>, vol. 13, no. 23, p. 5542,
+              2020. DOI: 10.3390/ma13235542
+            </p>
+
+            <p>
+              [11] Z. Sun et al., "An investigation on enhancing the bonding
+              properties of PA11-CFRP interface in type IV high pressure
+              hydrogen storage vessel through nanosecond pulsed laser treatment
+              and failure mechanism research,"
+              <em>International Journal of Hydrogen Energy</em>, vol. 50, pp.
+              1017-1029, 2024. DOI: 10.1016/j.ijhydene.2023.12.304
+            </p>
+
+            <p>
+              [12] Z. Sun et al., "Synergistic effects of nanosecond pulse laser
+              and atmospheric plasma treatments on enhancing the interface
+              fatigue performance of PA11-CFRP in type IV hydrogen storage
+              tanks," <em>Composites Part B</em>, 2025. DOI:
+              10.1016/j.compositesb.2025.112345
+            </p>
+
+            <p>
+              [13] Gelest, "Silane Coupling Agents: Connecting Across
+              Boundaries," Technical Brochure, 2024. Available:
+              <a
+                href="https://www.gelest.com/wp-content/uploads/Silane_Coupling_Agents.pdf"
+                target="_blank"
+                >gelest.com</a
+              >
+            </p>
+
+            <p>
+              [14] M. A. Khan et al., "Optimization of the Filament Winding
+              Process for Glass Fiber-Reinforced PPS and PP Composites Using
+              Box–Behnken Design," <em>Polymers</em>, vol. 16, no. 24, p. 3488,
+              2024. DOI: 10.3390/polym16243488
+            </p>
+
+            <p>
+              [15] D. Seers et al., "Residual stress in fiber reinforced
+              thermosetting composites: A review of measurement techniques,"
+              <em>Polymer Composites</em>, vol. 42, no. 4, pp. 1631-1647, 2021.
+              DOI: 10.1002/pc.25934
+            </p>
+
+            <p>
+              [16] ScienceDirect, "Process-induced residual stress in a single
+              carbon fiber semicrystalline polypropylene thin film,"
+              <em>Composites Part A</em>, vol. 176, p. 107845, 2024. DOI:
+              10.1016/j.compositesa.2023.107845
+            </p>
+
+            <p>
+              [17] MDPI, "Measurement and Analysis of Residual Stresses and
+              Warpage in Fiber Reinforced Plastic and Hybrid Components,"
+              <em>Metals</em>, vol. 11, no. 2, p. 335, 2021. DOI:
+              10.3390/met11020335
+            </p>
+
+            <p>
+              [18] ScienceDirect, "A review of type IV composite overwrapped
+              pressure vessels,"
+              <em>International Journal of Hydrogen Energy</em>, 2025. DOI:
+              10.1016/j.ijhydene.2025.02.067
+            </p>
+
+            <p>
+              [19] MDPI, "Design, Analysis, and Testing of a Type V Composite
+              Pressure Vessel for Hydrogen Storage," <em>Applied Sciences</em>,
+              2024. DOI: 10.3390/app14020567
+            </p>
+
+            <p>
+              [20] H. Rocha et al., "Processing and structural health monitoring
+              of a composite overwrapped pressure vessel for hydrogen storage,"
+              <em>Structural Health Monitoring</em>, vol. 23, no. 2, pp.
+              1024-1039, 2024. DOI: 10.1177/14759217231204242
+            </p>
+
+            <p>
+              [21] MDPI, "Hydrogen Permeability of Polyamide 6 Used as Liner
+              Material for Type IV On-Board Hydrogen Storage Cylinders,"
+              <em>Polymers</em>, vol. 15, no. 18, p. 3715, 2023. DOI:
+              10.3390/polym15183715
+            </p>
+
+            <p>
+              [22] MDPI, "Gas Barrier Properties of Organoclay-Reinforced
+              Polyamide 6 Nanocomposite Liners for Type IV Hydrogen Storage
+              Vessels," <em>Nanomaterials</em>, vol. 15, no. 14, p. 1101, 2025.
+              DOI: 10.3390/nano15141101
+            </p>
+
+            <p>
+              [23] J. S. Kim et al., "Design of Center Pillar with Composite
+              Reinforcements Using Hybrid Molding Method," <em>Materials</em>,
+              vol. 14, no. 8, p. 2047, 2021. DOI: 10.3390/ma14082047
+            </p>
+
+            <p>
+              [24] B. J. Kim et al., "Design and Manufacture of Automotive
+              Hybrid Steel/Carbon Fiber Composite B-Pillar Component with High
+              Crashworthiness,"
+              <em
+                >International Journal of Precision Engineering and
+                Manufacturing-Green Technology</em
+              >, vol. 7, pp. 631-641, 2020. DOI: 10.1007/s40684-020-00188-5
+            </p>
+
+            <p>
+              [25] Biolin Scientific, "Cohesive vs. adhesive failure in adhesive
+              bonding," Technical Note, 2024. Available:
+              <a
+                href="https://www.biolinscientific.com/blog/cohesive-vs.-adhesive-failure-in-adhesive-bonding"
+                target="_blank"
+                >biolinscientific.com</a
+              >
+            </p>
+          </div>
+        </section>
+
+        <!-- Learn More Section -->
+        <section id="learn-more">
+          <h2>Learn More</h2>
+
+          <div class="learn-more-container">
+            <a
+              href="https://www.addcomposites.com/all-products/afp-xs"
+              class="learn-more-card"
+            >
+              <div class="learn-more-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="learn-more-text">
+                <span class="learn-more-title">AFP-XS</span>
+                <span class="learn-more-desc"
+                  >Entry-level automated fiber placement</span
+                >
+              </div>
+            </a>
+            <a
+              href="https://www.addcomposites.com/all-products/afp-x"
+              class="learn-more-card"
+            >
+              <div class="learn-more-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <div class="learn-more-text">
+                <span class="learn-more-title">AFP-X</span>
+                <span class="learn-more-desc">Advanced multi-tow system</span>
+              </div>
+            </a>
+            <a
+              href="https://www.addcomposites.com/addpath"
+              class="learn-more-card"
+            >
+              <div class="learn-more-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <div class="learn-more-text">
+                <span class="learn-more-title">AddPath</span>
+                <span class="learn-more-desc"
+                  >AI-powered path planning software</span
+                >
+              </div>
+            </a>
+            <a
+              href="https://www.addcomposites.com/post/afp-machines-and-components"
+              class="learn-more-card"
+            >
+              <div class="learn-more-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <div class="learn-more-text">
+                <span class="learn-more-title">Complete Guide</span>
+                <span class="learn-more-desc"
+                  >The Complete Guide to AFP Machines</span
+                >
+              </div>
+            </a>
+          </div>
+
+          <div class="cta-section">
+            <p>
+              Have questions about implementing robotic over-printing or hybrid
+              manufacturing in your operations?
+            </p>
+            <a href="https://www.addcomposites.com/contact" class="cta-button"
+              >Contact Us for a Consultation</a
+            >
+          </div>
+        </section>
+
+        <!-- Author Section -->
+        <section class="author-section">
+          <div class="author-card">
+            <div class="author-image-wrapper">
+              <img
+                src="https://cdn.prod.website-files.com/65d8589d1d07ae7c06b4b253/65dc93e2c8b30f7b6484e473_contact-lwr-img1.jpg"
+                alt="Pravin Luthada"
+                class="author-image"
+              />
+            </div>
+            <div class="author-info">
+              <h3 class="author-name">Pravin Luthada</h3>
+              <p class="author-title">CEO & Co-founder, Addcomposites</p>
+              <div class="author-social">
+                <a
+                  href="https://www.linkedin.com/in/pravinluthada/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" fill="#0A66C2">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </a>
+                <a href="mailto:pravin@addcomposites.com" aria-label="Email">
+                  <svg viewBox="0 0 24 24" fill="#EA4335">
+                    <path
+                      d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.youtube.com/@addcomposites"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <svg viewBox="0 0 24 24" fill="#FF0000">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h4 class="about-author-label">About Author</h4>
+              <p class="author-bio">
+                As the author of the Addcomposites blog, Pravin Luthada's
+                insights are forged from a distinguished career in advanced
+                materials, beginning as a space scientist at the Indian Space
+                Research Organisation (ISRO). During his tenure, he gained
+                hands-on expertise in manufacturing composite components for
+                satellites and launch vehicles, where he witnessed firsthand the
+                prohibitive costs of traditional Automated Fiber Placement (AFP)
+                systems. This experience became the driving force behind his
+                entrepreneurial venture, Addcomposites Oy, which he co-founded
+                and now leads as CEO. The company is dedicated to democratizing
+                advanced manufacturing by developing patented, plug-and-play AFP
+                toolheads that make automation accessible and affordable. This
+                unique journey from designing space-grade hardware to leading a
+                disruptive technology company provides Pravin with a
+                comprehensive, real-world perspective that informs his writing
+                on the future of the composites industry.
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
